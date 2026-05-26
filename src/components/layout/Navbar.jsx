@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { toRoute } from "../../hooks/useHashRoute";
+import logo from "../../../src/assets/hoh.svg";
 
 export default function Navbar({ routes, activePath }) {
   const [open, setOpen] = useState(false);
@@ -28,7 +29,7 @@ export default function Navbar({ routes, activePath }) {
     <>
       <nav id="nav" className={scrolled ? "scrolled" : ""}>
         <button className="nav-logo" type="button" onClick={() => navigate("/")}>
-          HoH!
+        <img src={logo} alt="HoH Logo" />
         </button>
         <ul className="nav-links">
           {routes.map((route) => (
