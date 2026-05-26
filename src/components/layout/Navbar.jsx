@@ -1,0 +1,75 @@
+import { useEffect, useState } from "react";
+import { toRoute } from "../../hooks/useHashRoute";
+
+export default function Navbar({ routes, activePath }) {
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
+  const navigate = (path) => {
+    setOpen(false);
+    toRoute(path);
+  };
+
+  return (
+    <>
+      <nav id="nav" className={scrolled ? "scrolled" : ""}>
+        <button className="nav-logo" type="button" onClick={() => navigate("/")}>
+          HoH!
+        </button>
+        <ul className="nav-links">
+          {routes.map((route) => (
+            <li key={route.path}>
+              <button
+                className={`${route.cta ? "nav-cta" : ""} ${activePath === route.path ? "active" : ""}`}
+                type="button"
+                onClick={() => navigate(route.path)}
+              >
+                {route.label}
+              </button>
+            </li>
+          ))}
+        </ul>
+        <button
+          className={`nav-burger ${open ? "open" : ""}`}
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded={open}
+          onClick={() => setOpen((value) => !value)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+      </nav>
+      <div id="mnav" className={open ? "open" : ""}>
+        {routes.map((route) => (
+          <button key={route.path} className={route.cta ? "mcta" : ""} type="button" onClick={() => navigate(route.path)}>
+            {route.label}
+          </button>
+        ))}
+        <div className="mnav-bottom">
+          <a className="mnav-insta" href="https://instagram.com/houseofhearts.ngp" target="_blank" rel="noreferrer">
+            Instagram
+          </a>
+          <button className="mnav-close" type="button" onClick={() => setOpen(false)}>
+            Close
+          </button>
+        </div>
+      </div>
+    </>
+  );
+}
