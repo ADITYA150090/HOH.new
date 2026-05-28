@@ -5,11 +5,14 @@
     position: relative;
     min-height: 100vh;
     overflow: hidden;
-    background: #FAF4EC;
+    /* Animated Soft Background */
+    background-color: #faf4ec;
+    animation: bgColorShift 20s ease infinite;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 40px;
+    transition: background-color 2s ease;
 }
 
 
@@ -43,13 +46,13 @@
 }
 
 .hero-content h1 span {
-    background: #df5dbcb5;
+    background: #df5dbc;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .hero-content p {
-    margin-top: 30px;
+    margin-top: 20px;
     font-family: "Inter", sans-serif;
     font-size: 22px;
     color: #333;
@@ -59,9 +62,9 @@
 /* Button */
 
 .hero-btn {
-    margin-top: 40px;
+    margin-top: 20px;
     border: 3px solid black;
-    background: white;
+    background: rgb(224, 15, 15);
     border-radius: 999px;
     padding: 18px 34px;
     font-family: "Anton", sans-serif;
@@ -107,13 +110,14 @@
 }
 
 .creator-card span {
-    display: block;
-    background: #16c34a;
-    color: white;
-    text-align: center;
-    padding: 16px;
-    font-family: "Anton", sans-serif;
-    font-size: 28px;
+    /* HTML: <div class="pacman"></div> */
+    .pacman {
+        height: 200px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: radial-gradient(6% 6% at 60% 25%, #000 90%, #0000), radial-gradient(circle at 35% 35%, #0000, 70%, #0005) #fc0;
+        clip-path: polygon(0 0, 100% 0, 100% 25%, 50% 50%, 100% 75%, 100% 100%, 0 100%);
+    }
 }
 
 .card-left {
@@ -141,12 +145,14 @@
 }
 
 .orange-star {
-    width: 90px;
-    height: 90px;
-    background: #ff5a00;
-    top: 10%;
-    right: 28%;
-    border-radius: 40%;
+    position: absolute;
+    width: 550px;
+    height: 550px;
+    background: #d9ff00;
+    top: 15%;
+    left: 80%;
+    clip-path: polygon( 50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    transform: rotate(12deg);
 }
 
 .star-outline {
@@ -168,12 +174,29 @@
 }
 
 .green-shape {
-    width: 140px;
-    height: 100px;
-    background: #169c3a;
-    border-radius: 100px 0 0 100px;
-    left: 22%;
-    bottom: 30%;
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: 12%;
+    right: 15%;
+    box-shadow: 0 -45px 0 #ff7a00, 0 45px 0 #ff7a00, 45px 0 0 #ff7a00, -45px 0 0 #ff7a00, 32px 32px 0 #ff7a00, -32px 32px 0 #ff7a00, 32px -32px 0 #ff7a00, -32px -32px 0 #ff7a00;
+    height: 200px;
+    /* control the size */
+    aspect-ratio: 0.56;
+    clip-path: polygon(100% 0, 23% 46%, 46% 44%, 15% 69%, 38% 67%, 0 100%, 76% 57%, 53% 58%, 88% 33%, 60% 37%);
+    background: #fafafa;
+}
+
+.green-shape ::after {
+    content: "";
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background: #ffe600;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
@@ -191,5 +214,131 @@
     }
     .hero-btn {
         font-size: 18px;
+    }
+}
+
+
+/* =========================
+   RANDOM FRAMER SHAPES
+========================= */
+
+.shape {
+    position: absolute;
+    z-index: 2;
+}
+
+
+/* BLOB */
+
+.blob {
+    height: 200px;
+    top: 20%;
+    right: 80%;
+    width: 200px;
+    background: #dca2f7;
+    aspect-ratio: 1;
+    clip-path: shape(from 87.45% 45.02%, curve to 92.48% 56.45% with 90.99% 50.00%, curve to 92.05% 69.35% with 93.97% 62.91%, curve to 82.42% 77.15% with 90.14% 75.80%, curve to 71.01% 83.22% with 74.69% 78.49%, curve to 61.91% 91.53% with 67.33% 87.95%, curve to 49.74% 96.95% with 56.49% 95.12%, curve to 38.70% 91.46% with 42.99% 98.79%, curve to 25.99% 85.79% with 34.41% 84.13%, curve to 15.38% 80.54% with 17.56% 87.44%, curve to 14.30% 66.90% with 13.20% 73.65%, curve to 13.33% 55.08% with 15.41% 60.16%, curve to 11.20% 44.30% with 11.25% 50.00%, curve to 11.95% 32.32% with 11.14% 38.59%, curve to 16.84% 21.25% with 12.75% 26.06%, curve to 27.31% 15.38% with 20.92% 16.44%, curve to 38.83% 11.12% with 33.70% 14.32%, curve to 50.39% 5.23% with 43.95% 7.93%, curve to 62.85% 5.60% with 56.83% 2.53%, curve to 72.70% 14.03% with 68.88% 8.67%, curve to 79.11% 24.51% with 76.53% 19.39%, curve to 82.80% 34.84% with 81.69% 29.63%, curve to 87.45% 45.02% with 83.91% 40.04%);
+}
+
+.blob-shape {
+    height: 100px;
+    top: 10%;
+    right: 70%;
+    width: 100px;
+    background: #24fcb4;
+    mask: radial-gradient(#0000 71%, #000 72%) 10000% 10000%/99.5% 99.5%;
+    /* if you will use a different unit than px consider round()
+     height: round(__,1px);
+     width: round(__,1px);
+    */
+}
+
+.starburst {
+    height: 200px;
+    top: 90%;
+    left: 80%;
+    width: 200px;
+    background: #1F51FF;
+    /* adjust to control the size */
+    aspect-ratio: 1;
+    clip-path: polygon(100% 50%, 78.98% 57.76%, 93.3% 75%, 71.21% 71.21%, 75% 93.3%, 57.76% 78.98%, 50% 100%, 42.24% 78.98%, 25% 93.3%, 28.79% 71.21%, 6.7% 75%, 21.02% 57.76%, 0% 50%, 21.02% 42.24%, 6.7% 25%, 28.79% 28.79%, 25% 6.7%, 42.24% 21.02%, 50% 0%, 57.76% 21.02%, 75% 6.7%, 71.21% 28.79%, 93.3% 25%, 78.98% 42.24%);
+}
+
+
+/* FLOWER */
+
+
+/* .flower-shape {
+    width: 120px;
+    aspect-ratio: 1;
+    background: #19b84f;
+    top: 68%;
+    right: 14%;
+    --g: /20.56% 20.56% radial-gradient(#000 calc(71% - 1px), #0000 71%) no-repeat;
+    mask: 100% 50% var(--g), 93.301% 75% var(--g), 75% 93.301% var(--g), 50% 100% var(--g), 25% 93.301% var(--g), 6.699% 75% var(--g), 0% 50% var(--g), 6.699% 25% var(--g), 25% 6.699% var(--g), 50% 0% var(--g), 75% 6.699% var(--g), 93.301% 25% var(--g), radial-gradient( 100% 100%, #000 38.366%, #0000 calc(38.366% + 1px));
+    rotate: 12deg;
+} */
+
+
+/* SCALLOPED */
+
+.scalloped-shape {
+    --r: 20px;
+    width: 140px;
+    aspect-ratio: 1;
+    top: 18%;
+    right: 12%;
+    background: #ffd500;
+    padding: calc(1.5 * var(--r));
+    mask: linear-gradient(#000 0 0) no-repeat 50% / calc(100% - 2 * var(--r)) calc(100% - 2 * var(--r)), radial-gradient( farthest-side, #000 97%, #0000) 0 0 / calc(2 * var(--r)) calc(2 * var(--r)) round;
+}
+
+
+/* WIGGLY */
+
+.wiggly-shape {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: #ffffff;
+    bottom: 15%;
+    right: 80%;
+    clip-path: polygon( 50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    transform: rotate(12deg);
+}
+
+
+/* ANIMATION */
+
+@keyframes blobMove {
+    0% {
+        border-radius: 40% 60% 70% 30% / 40% 30% 70% 60%;
+    }
+    50% {
+        border-radius: 70% 30% 40% 60% / 60% 40% 30% 70%;
+    }
+    100% {
+        border-radius: 40% 60% 70% 30% / 40% 30% 70% 60%;
+    }
+}
+
+@keyframes bgColorShift {
+    0% {
+        background-color: #FF8743;
+    }
+    20% {
+        background-color: #EFFF82;
+    }
+    /* 40% {
+        background-color: #0BA13B;
+    } */
+    /* 60% {
+        background-color: #518A9E;
+    } */
+    80% {
+        background-color: #fff5e3;
+    }
+    100% {
+        background-color: #eb4ff9cb;
     }
 }
