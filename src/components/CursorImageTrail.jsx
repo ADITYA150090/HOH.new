@@ -24,31 +24,43 @@ import img18 from "../assets/18.jpg";
 import img19 from "../assets/19.jpg";
 import img20 from "../assets/20.jpg";
 import img21 from "../assets/21.jpg";
+import img22 from "../assets/22.png";
+import img23 from "../assets/23.png";
+import img24 from "../assets/24.png";
+import img25 from "../assets/25.png";
+import img26 from "../assets/26.png";
 
 const images = [
+  
+  
   img1,
-  img12,
   img2,
-  img13,
   img3,
-  img14,
  
-  
   img5,
-  
   img6,
-  img16,
   img7,
-  img17,
   img8,
-  img18,
   img9,
-  img19,
   img10,
-  img20,
   img11,
-  img21,
+  img12,
+  img13,
+  img13,
+  img13,
+  img14,
 
+  img16,
+  img17,
+  img18,
+  img19,
+  img20,
+  img21,
+  img22,
+  img23,
+  img24,
+  img25,
+  img26,
 ];
 
 export default function CursorImageTrail() {

@@ -1,13 +1,13 @@
-import Closing from "../components/sections/Closing";
+// import Closing from "../components/sections/Closing";
 import CommunitySection from "../components/sections/CommunitySection";
 import Hero from "../components/sections/Hero";
 import IntroSection from "../components/sections/IntroSection";
-import Manifesto from "../components/sections/Manifesto";
+// import Manifesto from "../components/sections/Manifesto";
 import PartnerSection from "../components/sections/PartnerSection";
 import PartnersBand from "../components/sections/PartnersBand";
-import ServicesSection from "../components/sections/ServicesSection";
+// import ServicesSection from "../components/sections/ServicesSection";
 import StatsSection from "../components/sections/StatsSection";
-import StorySection from "../components/sections/StorySection";
+// import StorySection from "../components/sections/StorySection";
 import TestimonialsSection from "../components/sections/TestimonialsSection";
 import Ticker from "../components/ui/Ticker";
 import WorkSection from "../components/sections/WorkSection";
@@ -23,14 +23,14 @@ export default function HomePage() {
       <IntroSection />
       <StatsSection />
       <Ticker items={cultureItems} tone="dark" reverse />
-      <ServicesSection />
+      {/* <ServicesSection /> */}
       <WorkSection compact />
       <TestimonialsSection />
-      <StorySection />
+      {/* <StorySection /> */}
       <CommunitySection />
       <PartnersBand />
       <PartnerSection />
-      <Closing />
+      {/* <Closing /> */}
     </main>
   );
 }

@@ -44,7 +44,7 @@ if (!visible) return null;
           </div>
 
           <div className="face f-b">
-            <span className="content">End?</span>
+            <span className="content">Load</span>
           </div>
 
           <div className="face f-r">

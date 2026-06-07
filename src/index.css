@@ -179,11 +179,12 @@ button {
 #community,
 #partner {
     padding: 120px 48px;
+    background-color: #96dd57;
 }
 
 .cream-section {
     padding: 120px 48px;
-    background: var(--cream);
+    background: var(--purp);
     color: var(--ink);
 }
 
@@ -656,6 +657,7 @@ button {
 
 .stats-grid {
     display: grid;
+    background-color: #8a3000;
     grid-template-columns: repeat(4, 1fr);
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -1004,6 +1006,7 @@ button {
 
 #community {
     background: var(--ink);
+    background-color: #005090;
 }
 
 .insta-grid {
@@ -1069,8 +1072,8 @@ button {
 
 .partners-band {
     padding: 44px 48px;
-    background: var(--cream);
     color: var(--ink);
+    background-color: #4b0090;
 }
 
 .pb-label {
@@ -1188,7 +1191,7 @@ button {
 
 #footer {
     padding: 70px 48px 28px;
-    background: var(--ink3);
+    background: var(--Purp);
 }
 
 .ft-grid {
