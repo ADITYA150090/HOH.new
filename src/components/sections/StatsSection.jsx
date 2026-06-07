@@ -8,7 +8,8 @@ export default function StatsSection() {
       <div className="stats-grid">
         {stats.map((stat) => (
           <article className="stat-cell reveal" key={stat.label}>
-           <div className="stat-big">
+    <div className="ek-sath">
+    <div className="stat-big">
   <CountUp
     from={0}
     to={stat.value }
@@ -18,6 +19,8 @@ export default function StatsSection() {
     className="count-up-text"
     
   />
+  <div className="sign">{stat.sign}</div>
+    </div>
   
 </div>
             <div className="stat-name">{stat.label}</div>

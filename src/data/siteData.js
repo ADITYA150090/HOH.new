@@ -1,8 +1,8 @@
 export const stats = [
-    { value: 15, label: " Events", note: "Built with community first" },
-    { value: 11000, label: " Footfall", note: "Across original IP and partner events" },
-    { value: 9000, label: "Community Members", note: "Organic youth culture reach" },
-    { value: 9977, label: "Ingagment Rate", note: "Across HoH and creator network" },
+    { value: 15, sign: "+", label: " Events", note: "Built with community first" },
+    { value: 11000, sign: "+", label: " Footfall", note: "Across original IP and partner events" },
+    { value: 900, sign: "+", label: "Community Members", note: "Organic youth culture reach" },
+    { value: 9.37, sign: "%", label: "Ingagment Rate", note: "Across HoH and creator network" },
 ];
 
 export const services = [{

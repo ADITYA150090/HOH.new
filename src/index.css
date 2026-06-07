@@ -677,6 +677,14 @@ button {
     font-family: var(--f-display);
     font-size: clamp(3rem, 6vw, 6.5rem);
     color: var(--pink);
+    display: flex;
+}
+
+.ek-sath {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    /* optional */
 }
 
 .stat-name,

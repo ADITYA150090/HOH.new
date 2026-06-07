@@ -17,12 +17,12 @@ export default function IntroSection() {
         </div>
         <div className="intro-copy reveal-right">
           <p>
-            House of Hearts is Nagpur's creative home for Gen Z: a platform  that discovers  talent, curates
-            experiences they care about, and builds a cultural identity that feels like house.
+          House of Hearts is Nagpur's creative house for Gen Z — a platform that discovers talent, curates experiences they actually care about, and builds a cultural identity that has never existed here before.
+
+
           </p>
           <p>
-            We create content, host events, connect creators, and give brands a way into youth culture without losing the
-            room.
+          We create content that represents the city's youth. We host events they want to attend. We connect creators, brands, and communities under one roof. Everything we do contributes to a larger movement shaping the future of youth culture in Nagpur.
           </p>
           <Button variant="ghost" onClick={() => toRoute("/story")}>
             Our Full Story
