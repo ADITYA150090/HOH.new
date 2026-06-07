@@ -17,8 +17,8 @@ export default function IntroSection() {
         </div>
         <div className="intro-copy reveal-right">
           <p>
-            House of Hearts is Nagpur's creative home for Gen Z: a platform that discovers the city's talent, curates
-            experiences they care about, and builds a cultural identity that feels like home.
+            House of Hearts is Nagpur's creative home for Gen Z: a platform  that discovers  talent, curates
+            experiences they care about, and builds a cultural identity that feels like house.
           </p>
           <p>
             We create content, host events, connect creators, and give brands a way into youth culture without losing the
