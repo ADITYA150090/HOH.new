@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { routes } from "../../routes";
 import Cursor from "./Cursor";
-import Footer from "./Footer";
+import Footer from "../layout/Footer/Footer";
 import Loader from "../Loader";
 import Navbar from "./Navbar";
 

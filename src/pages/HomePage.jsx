@@ -11,6 +11,7 @@ import StatsSection from "../components/sections/StatsSection";
 import TestimonialsSection from "../components/sections/TestimonialsSection";
 import Ticker from "../components/ui/Ticker";
 import WorkSection from "../components/sections/WorkSection";
+import WorkSectionTwo from "../components/sections/WorkSectionTwo";
 
 const cultureItems = ["Events", "Creators", "Community", "Nagpur", "Youth Culture", "House of Hearts"];
 
@@ -25,6 +26,7 @@ export default function HomePage() {
       <Ticker items={cultureItems} tone="dark" reverse />
       {/* <ServicesSection /> */}
       <WorkSection compact />
+      <WorkSectionTwo compact />
       <TestimonialsSection />
       {/* <StorySection /> */}
       <CommunitySection />
