@@ -3,7 +3,7 @@
     --ink: #ffffff;
     --ink2: #111;
     --ink3: #181818;
-    --pink: #e8006e;
+    --pink: #FD1D7E;
     --pink-lt: #ff1a82;
     --Purp: #A95FFE;
     --green-neon: #76FF02;
@@ -180,7 +180,7 @@ button {
 #community,
 #partner {
     padding: 120px 48px;
-    background-color: #96dd57;
+    background-color: #ffffff;
 }
 
 .cream-section {
@@ -635,10 +635,11 @@ button {
 .about-big {
     margin: 20px 0 0;
     font-family: var(--f-display);
-    font-size: clamp(3rem, 7vw, 7rem);
+    font-size: clamp(3rem, 8vw, 7.5rem);
     line-height: 0.92;
     letter-spacing: 0.01em;
     text-transform: uppercase;
+    color: #000d1a;
 }
 
 .intro-title span,
@@ -658,7 +659,7 @@ button {
 
 .stats-grid {
     display: grid;
-    background-color: #8a3000;
+    background-color: #db9def;
     grid-template-columns: repeat(4, 1fr);
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -676,7 +677,7 @@ button {
 .stat-big {
     font-family: var(--f-display);
     font-size: clamp(3rem, 6vw, 6.5rem);
-    color: var(--pink);
+    color: #ff4237;
     display: flex;
 }
 
