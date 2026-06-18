@@ -1,0 +1,30 @@
+.story {
+    padding: 120px 40px;
+    background: #ff530a;
+}
+
+.story-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.story-label {
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    font-weight: 700;
+    color: #ff4237;
+}
+
+.story-title {
+    font-size: clamp(3rem, 8vw, 7rem);
+    line-height: 0.9;
+    margin: 24px 0;
+}
+
+.story-text {
+    max-width: 650px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(0, 0, 0, 0.65);
+    margin-bottom: 20px;
+}

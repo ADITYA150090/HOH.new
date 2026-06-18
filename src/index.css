@@ -5,7 +5,7 @@
     --ink3: #181818;
     --pink: #FD1D7E;
     --pink-lt: #ff1a82;
-    --Purp: #A95FFE;
+    --Purp: #db9def;
     --green-neon: #76FF02;
     --pink-glow: rgba(232, 0, 110, 0.24);
     --cream: #f7f2eb;
@@ -1173,22 +1173,38 @@ button {
 }
 
 .closing {
-    min-height: 82vh;
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
     display: grid;
     place-items: center;
-    gap: 18px;
-    padding: 90px 48px;
+    background: #0f0f0f;
+}
+
+.closing-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.closing-content {
+    position: relative;
+    z-index: 2;
     text-align: center;
-    background: var(--ink);
+}
+
+.closing::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.034);
+    z-index: 1;
 }
 
 .closing-city,
 .closing-tag {
-    color: var(--dimmer);
-    font-family: var(--f-syne);
-    font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 0.18em;
+    color: rgba(255, 255, 255, .7);
+    letter-spacing: 0.15em;
     text-transform: uppercase;
 }
 

@@ -54,7 +54,7 @@ export default function Services() {
         <div className="services-header">
           <div>
             <div className="services-label">
-              <span></span>
+             
               What We Do
             </div>
 
@@ -73,8 +73,8 @@ export default function Services() {
         </div>
 
         <p className="services-intro">
-          For brands reaching Gen Z, venues wanting to fill rooms,
-          or creators wanting to grow — built to work for all of it.
+          For brands reaching Gen Z, venues wanting to fill rooms,or creators wanting to grow — built to work for all of it.
+          
         </p>
 
         <div className="svc-list">

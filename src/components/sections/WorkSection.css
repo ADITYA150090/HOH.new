@@ -39,6 +39,7 @@
     color: rgba(0, 0, 0, .55);
     max-width: 420px;
     align-self: end;
+    white-space: nowrap;
 }
 
 .svc-list {
