@@ -3,6 +3,8 @@ import { useHashRoute } from "./hooks/useHashRoute";
 import AppLayout from "./components/layout/AppLayout";
 import NotFoundPage from "./pages/NotFoundPage";
 
+
+
 export default function App() {
   const currentRoute = useHashRoute();
   const page = routes.find((route) => route.path === currentRoute);
@@ -10,7 +12,9 @@ export default function App() {
 
   return (
     <AppLayout activePath={page?.path ?? "/"}>
+     
       <Page />
+      
     </AppLayout>
   );
 }

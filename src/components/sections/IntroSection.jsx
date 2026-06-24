@@ -1,5 +1,7 @@
 import { toRoute } from "../../hooks/useHashRoute";
-import Button from "../ui/Button";
+
+import "./IntroSection.css"
+import EYE from "../../assets/Texture/eye.webp";
 
 export default function IntroSection() {
   return (
@@ -10,7 +12,7 @@ export default function IntroSection() {
           <h2 className="intro-title">
             Not a <br/> media page.
             <br />
-            Not an  <br/>event company.
+            Not an <br/> event company.
             <br/>
             <span>A community.</span>
           </h2>
@@ -22,9 +24,10 @@ export default function IntroSection() {
           <p>
           We create content that represents the city's youth. We host events they want to attend. We connect creators, brands, and communities under one roof. Everything we do contributes to a larger movement shaping the future of youth culture in Nagpur.
           </p>
-          <Button variant="ghost" onClick={() => toRoute("/story")}>
-            Our Full Story
-          </Button>
+        
+        <div className="img">
+        <img src={EYE} alt="House of Hearts" />
+        </div>
         </div>
       </div>
     </section>

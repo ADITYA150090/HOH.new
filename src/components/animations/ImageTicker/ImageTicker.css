@@ -1,0 +1,60 @@
+.ticker-wrapper {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+    background: #EeFe82;
+}
+
+.ticker {
+    overflow: hidden;
+    width: 100%;
+}
+
+.ticker-track {
+    display: flex;
+    width: max-content;
+    gap: 20px;
+}
+
+.ticker-img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+
+/* Left -> Right */
+
+.left {
+    animation: slideRight 50s linear infinite;
+}
+
+
+/* Right -> Left */
+
+.right {
+    animation: slideLeft 40s linear infinite;
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}

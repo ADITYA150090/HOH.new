@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./WorkSection.css";
-import TV from "../../assets/Texture/TV.webp";
-
+import TV from "../../assets/Texture/TVhoh.webp";
+import "./IntroSection.css"
 const services = [
   {
     no: "01",
@@ -53,7 +53,7 @@ export default function Services() {
       <div className="max-w">
         <div className="services-header">
           <div>
-            <div className="services-label">
+            <div className="label">
              
               What We Do
             </div>

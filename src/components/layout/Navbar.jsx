@@ -5,12 +5,32 @@ import logo from "../../../src/assets/hoh.svg";
 export default function Navbar({ routes, activePath }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
+  const [hidden, setHidden] = useState(false);
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    let lastScroll = window.scrollY;
+  
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
+  
+      setScrolled(currentScroll > 40);
+  
+      if (currentScroll > lastScroll && currentScroll > 120) {
+        // scrolling down
+        setHidden(true);
+      } else {
+        // scrolling up
+        setHidden(false);
+      }
+  
+      lastScroll = currentScroll;
+    };
+  
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+    });
+  
+    return () =>
+      window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
@@ -27,7 +47,10 @@ export default function Navbar({ routes, activePath }) {
 
   return (
     <>
-      <nav id="nav" className={scrolled ? "scrolled" : ""}>
+      <nav id="nav"  className={`
+    ${scrolled ? "scrolled" : ""}
+    ${hidden ? "nav-hidden" : ""}
+  `}>
         <button className="nav-logo" type="button" onClick={() => navigate("/")}>
         <img src={logo} alt="HoH Logo" />
         </button>
@@ -63,7 +86,7 @@ export default function Navbar({ routes, activePath }) {
           </button>
         ))}
         <div className="mnav-bottom">
-          <a className="mnav-insta" href="https://instagram.com/houseofhearts.ngp" target="_blank" rel="noreferrer">
+          <a className="mnav-insta" href="https://www.instagram.com/hoh.commune/" target="_blank" rel="noreferrer">
             Instagram
           </a>
           <button className="mnav-close" type="button" onClick={() => setOpen(false)}>

@@ -1,0 +1,110 @@
+.neo-btn-shell {
+    position: relative;
+    display: inline-block;
+}
+
+
+/* Black layer behind */
+
+.neo-btn-shell::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #000;
+    transform: translate(-14px, 14px);
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    z-index: 1;
+}
+
+
+/* Main Button */
+
+.neo-btn {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-width: 220px;
+    height: 64px;
+    padding-inline: 2rem;
+    border: 3px solid #000;
+    background: #ececec;
+    text-decoration: none;
+    cursor: pointer;
+    transform: translate(-14px, -14px);
+    /* transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease; */
+    transform: translate(0, 0);
+    font-family: inherit;
+}
+
+
+/* Text */
+
+.neo-btn__text {
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #000;
+}
+
+
+/* Arrow */
+
+.neo-btn__icon {
+    font-size: 2.4rem;
+    line-height: 1;
+    color: #ff3b30;
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), color 0.35s ease;
+}
+
+
+/* Hover */
+
+.neo-btn-shell:hover .neo-btn {}
+
+.neo-btn-shell:hover .neo-btn__icon {
+    transform: translateX(10px);
+}
+
+
+/* Press */
+
+.neo-btn:active {
+    transform: translate(3px, 3px);
+}
+
+
+/* Fill Variant */
+
+.neo-btn--fill {
+    background: #ececec;
+    color: #000;
+}
+
+
+/* Outline Variant */
+
+.neo-btn--outline {
+    background: transparent;
+    border-color: #000;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .neo-btn {
+        min-width: 240px;
+        height: 70px;
+        padding-inline: 1.5rem;
+    }
+    .neo-btn__text {
+        font-size: 0.95rem;
+    }
+    .neo-btn__icon {
+        font-size: 2rem;
+    }
+}

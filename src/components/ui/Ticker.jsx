@@ -1,5 +1,5 @@
 export default function Ticker({ items, tone = "pink", reverse = false }) {
-  const repeated = [...items, ...items];
+  const repeated = [...items, ...items,...items,...items,...items];
 
   return (
     <div className={`ticker ticker-${tone}`} aria-hidden="true">

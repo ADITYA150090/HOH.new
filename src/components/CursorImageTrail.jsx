@@ -36,7 +36,7 @@ const images = [
   img1,
   img2,
   img3,
- 
+  img13,
   img5,
   img6,
   img7,
@@ -45,9 +45,9 @@ const images = [
   img10,
   img11,
   img12,
+  
   img13,
-  img13,
-  img13,
+  
   img14,
 
   img16,
@@ -61,6 +61,7 @@ const images = [
   img24,
   img25,
   img26,
+  img13,
 ];
 
 export default function CursorImageTrail() {

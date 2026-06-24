@@ -1,30 +1,128 @@
 .story {
-    padding: 120px 40px;
-    background: #ff530a;
+    height: 100vh;
+    padding: 8rem 3rem;
+    /* background: #ff4d00; */
+    background: var(--color-purple-500);
+    color: var(--color-pink-100);
 }
 
 .story-container {
-    max-width: 900px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
-.story-label {
-    font-size: 0.8rem;
-    letter-spacing: 0.2em;
-    font-weight: 700;
-    color: #ff4237;
+
+/* =========================
+     TOP SECTION
+  ========================= */
+
+.story-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    margin-bottom: 5rem;
 }
 
 .story-title {
-    font-size: clamp(3rem, 8vw, 7rem);
-    line-height: 0.9;
-    margin: 24px 0;
+    font-size: clamp(4rem, 8vw, 8rem);
+    line-height: 0.88;
+    letter-spacing: -0.08em;
+    font-weight: 900;
 }
 
-.story-text {
-    max-width: 650px;
+.story-content p {
     font-size: 1.1rem;
-    line-height: 1.8;
-    color: rgba(0, 0, 0, 0.65);
-    margin-bottom: 20px;
+    line-height: 2;
+    color: rgba(255, 255, 255, .9);
+    margin-bottom: 1.8rem;
+}
+
+
+/* =========================
+     VALUES
+  ========================= */
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    perspective: 1200px;
+}
+
+.value-card {
+    position: relative;
+    overflow: hidden;
+    padding: 1.75rem;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, .12);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, .18);
+    transition: all .4s ease;
+}
+
+.value-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -150%;
+    width: 70%;
+    height: 200%;
+    background: linear-gradient( 90deg, transparent 0%, rgba(255, 255, 255, .08) 20%, rgba(255, 255, 255, .6) 50%, rgba(255, 255, 255, .08) 80%, transparent 100%);
+    transform: rotate(25deg);
+    transition: left 2.5s cubic-bezier(.22, .61, .36, 1);
+    pointer-events: none;
+}
+
+.value-card:hover::before {
+    left: 180%;
+}
+
+.value-card span {
+    display: block;
+    font-size: 4rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, .35);
+    margin-bottom: .75rem;
+}
+
+.value-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: .75rem;
+}
+
+.value-card p {
+    color: rgba(255, 255, 255, .75);
+    line-height: 1.7;
+}
+
+
+/* =========================
+     TABLET
+  ========================= */
+
+@media (max-width: 991px) {
+    .story-top {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================
+     MOBILE
+  ========================= */
+
+@media (max-width: 640px) {
+    .story {
+        padding: 6rem 1.5rem;
+    }
+    .story-title {
+        font-size: clamp(3rem, 12vw, 5rem);
+    }
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
 }

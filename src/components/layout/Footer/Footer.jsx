@@ -47,7 +47,7 @@ export default function Footer({ routes }) {
 
           <div className="ft-links">
             <a
-              href="https://instagram.com/houseofhearts.ngp"
+              href="https://www.instagram.com/hoh.commune/"
               target="_blank"
               rel="noreferrer"
             >
@@ -87,8 +87,8 @@ export default function Footer({ routes }) {
           </div>
 
           <div className="ft-cta">
-            <Button href="https://instagram.com/houseofhearts.ngp">
-              Follow on Instagram
+            <Button href="https://www.instagram.com/hoh.commune/">
+            hoh.commune
             </Button>
           </div>
         </div>

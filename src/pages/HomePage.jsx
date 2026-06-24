@@ -13,7 +13,10 @@ import OurStory from "../components/sections/OurStory/Story";
 import Brands from "../components/sections/Brands/Brands";
 import Ticker from "../components/ui/Ticker";
 import WorkSection from "../components/sections/WorkSection";
-import WorkSectionTwo from "../components/sections/WorkSectionTwo";
+import ImageTicker from "../components/animations/ImageTicker/ImageTicker";
+// import WorkSectionTwo from "../components/sections/WorkSectionTwo";
+import CardStack from "../components/animations/SkipperUi/Cards";
+import Timeline from "../components/Events/Events";
 
 const cultureItems = ["Events", "Creators", "Community", "Nagpur", "Youth Culture", "House of Hearts"];
 
@@ -28,15 +31,20 @@ export default function HomePage() {
       <Ticker items={cultureItems}  reverse />
       {/* <ServicesSection /> */}
       <WorkSection compact />
-      <WorkSectionTwo compact />
+      <Timeline/>
+      < ImageTicker/>
+      {/* <WorkSectionTwo compact /> */}
+    
       {/* <TestimonialsSection /> */}
       {/* <StorySection /> */}
       {/* <CommunitySection /> */}
       <OurStory/>
       <Brands/>
-      <PartnersBand />
+      <CardStack />
+     
+      {/* <PartnersBand /> */}
       <PartnerSection />
-      <Closing />
+      {/* <Closing /> */}
     </main>
   );
 }

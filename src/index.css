@@ -198,7 +198,22 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    transition: background 0.35s, border-color 0.35s;
+    transition: transform 0.5s cubic-bezier(.22, 1, .36, 1), background-color .4s ease, backdrop-filter .4s ease;
+    width: 100%;
+}
+
+
+/* Hide while scrolling down */
+
+#nav.nav-hidden {
+    transform: translateY(-120%);
+}
+
+
+/* Show while scrolling up */
+
+#nav:not(.nav-hidden) {
+    transform: translateY(0);
 }
 
 #nav.scrolled {
@@ -1178,7 +1193,7 @@ button {
     overflow: hidden;
     display: grid;
     place-items: center;
-    background: #0f0f0f;
+    background: linear-gradient( to bottom, #ffffff 0%, #7095D6 100%);
 }
 
 .closing-bg {

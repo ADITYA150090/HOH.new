@@ -14,7 +14,7 @@ export default function CommunitySection() {
           {communityPosts.map((post, index) => (
             <a
               className={`insta-post ip${(index % 9) + 1} reveal`}
-              href="https://instagram.com/houseofhearts.ngp"
+              href="https://www.instagram.com/hoh.commune/"
               target="_blank"
               rel="noreferrer"
               role="listitem"
@@ -33,7 +33,7 @@ export default function CommunitySection() {
             <span>this is your community.</span>
           </div>
           <div className="comm-actions">
-            <Button href="https://instagram.com/houseofhearts.ngp">Follow on Instagram</Button>
+            <Button href="https://www.instagram.com/hoh.commune/">Follow on Instagram</Button>
           </div>
         </div>
       </div>
