@@ -1,26 +1,169 @@
 .stack-section {
     height: 100vh;
-    background: #4d18ff;
+    background: #eefd82;
     overflow: hidden;
-    position: relative;
+    color: #111;
 }
 
 .stack-container {
     width: 100%;
     height: 100vh;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
 }
 
 .stack-card {
     position: absolute;
-    width: min(1400px, 85vw);
-    height: 460px;
-    background: #d7d5d0;
+    width: min(1100px, 85vw);
+    height: 620px;
+    border-radius: 28px;
     border: 2px solid #111;
-    border-radius: 30px;
-    padding: 3rem;
-    box-shadow: 0 5px 0 #111, 0 10px 0 #111, 0 15px 0 #111;
+    padding: 55px;
+    overflow: hidden;
+    box-shadow: 0 8px 0 #111, 0 16px 0 rgba(0, 0, 0, .12);
+}
+
+
+/* Different paper colors */
+
+.paper1 {
+    background: #FFF7E8;
+    background-image: url(https://img.magnific.com/free-vector/crumpled-white-paper-sheet-with-check-grid-lines_107791-34762.jpg?semt=ais_hybrid&w=740&q=80);
+}
+
+.paper2 {
+    background: #F6F3EA;
+    background-image: url(https://png.pngtree.com/background/20250103/original/pngtree-white-paper-texture-background-a-blank-white-crumpled-and-creased-canvas-picture-image_15880779.jpg);
+}
+
+.paper3 {
+    background: #FFF4D6;
+    background-image: url(https://thumbs.dreamstime.com/b/old-paper-texture-16209018.jpg);
+}
+
+.paper4 {
+    background: #F3F8ED;
+    background-image: url(https://images.template.net/347781/Grid-Paper-Texture-Background-edit-online-1.jpg);
+}
+
+.paper5 {
+    background: #F8F2F0;
+}
+
+
+/* paper texture */
+
+.stack-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 20%, rgba(0, 0, 0, .04) 1px, transparent 1px), radial-gradient(circle at 70% 60%, rgba(0, 0, 0, .03) 1px, transparent 1px);
+    background-size: 18px 18px;
+    opacity: .5;
+    pointer-events: none;
+}
+
+
+/* masking tape */
+
+.tape {
+    position: absolute;
+    width: 90px;
+    height: 28px;
+    background: rgba(255, 255, 255, .55);
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(0, 0, 0, .05);
+}
+
+.tape-left {
+    left: 45px;
+    top: -10px;
+    transform: rotate(-12deg);
+}
+
+.tape-right {
+    right: 45px;
+    top: -10px;
+    transform: rotate(11deg);
+}
+
+
+/* top row */
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-size: .85rem;
+    letter-spacing: 2px;
+    margin-bottom: 70px;
+}
+
+.stack-card h2 {
+    color: #111;
+    font-size: 4rem;
+    max-width: 700px;
+    line-height: 1;
+    margin-bottom: 30px;
+    font-weight: 900;
+}
+
+.stack-card p {
+    max-width: 600px;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+
+/* footer */
+
+.card-bottom {
+    position: absolute;
+    left: 55px;
+    bottom: 50px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.logo-circle {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: 2px solid #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+
+.card-bottom span {
+    font-size: .9rem;
+    letter-spacing: 2px;
+}
+
+
+/* hand drawn circle */
+
+.scribble {
+    position: absolute;
+    right: 80px;
+    bottom: 70px;
+    width: 180px;
+    height: 180px;
+    border: 4px solid #111;
+    border-radius: 50%;
+    opacity: .18;
+    transform: rotate(-12deg);
+}
+
+.scribble::after {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    border: 3px solid #111;
+    border-radius: 50%;
 }
