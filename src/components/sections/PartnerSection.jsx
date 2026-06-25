@@ -1,6 +1,6 @@
 import { useState } from "react";
-
-const types = [
+import "./PartnerSection.css"
+const partnershipTypes = [
   "Event Partner",
   "Content Partner",
   "Community Partner",
@@ -9,19 +9,19 @@ const types = [
 ];
 
 export default function PartnerSection() {
-  const [sent, setSent] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const submit = (event) => {
-    event.preventDefault();
-    setSent(true);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsSubmitted(true);
   };
 
   return (
-    <section id="partner">
-      <div className="max-w">
-        <div className="label">Partner With Us</div>
+    <section className="partner-section" id="partner">
+      <div className="partner-container">
+        <span className="partner-label">Partner With Us</span>
 
-        <h2 className="partner-head">
+        <h2 className="partner-heading">
           You need to reach
           <br />
           Nagpur's youth.
@@ -29,63 +29,74 @@ export default function PartnerSection() {
           <span>We already have them.</span>
         </h2>
 
-        <div className="form-box">
-          {sent ? (
-            <div className="form-done">
-              <h4>Message Sent!</h4>
-              <p>We'll be in touch within 24 hours.</p>
+        <div className="partner-form-card">
+          {isSubmitted ? (
+            <div className="partner-success">
+              <h3>Message Sent 🎉</h3>
+              <p>We'll get back to you within 24 hours.</p>
             </div>
           ) : (
-            <form onSubmit={submit}>
-              <div className="form-title">Let's Talk.</div>
-              <p className="form-sub">
+            <form onSubmit={handleSubmit} className="partner-form">
+              <h3 className="partner-form-heading">Let's Talk.</h3>
+
+              <p className="partner-form-description">
                 Tell us what you're building. We'll tell you how we can help.
               </p>
 
-              <div className="frow">
-                <label className="fg">
-                  Your Name
-                  <input required name="name" placeholder="Rohan Sharma" />
-                </label>
+              <div className="partner-row">
+                <div className="partner-field">
+                  <label>Your Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Rohan Sharma"
+                    required
+                  />
+                </div>
 
-                <label className="fg">
-                  Brand / Organisation
-                  <input name="brand" placeholder="Your Brand" />
-                </label>
+                <div className="partner-field">
+                  <label>Brand / Organisation</label>
+                  <input
+                    type="text"
+                    name="brand"
+                    placeholder="Your Brand"
+                  />
+                </div>
               </div>
 
-              <label className="fg">
-                Type of Partnership
-                <select required name="partnershipType" defaultValue="">
+              <div className="partner-field">
+                <label>Type of Partnership</label>
+                <select required defaultValue="">
                   <option value="" disabled>
                     Select one...
                   </option>
-                  {types.map((type) => (
+
+                  {partnershipTypes.map((type) => (
                     <option key={type}>{type}</option>
                   ))}
                 </select>
-              </label>
+              </div>
 
-              <label className="fg">
-                Your Goal or Idea
+              <div className="partner-field">
+                <label>Your Goal or Idea</label>
                 <textarea
-                  name="message"
+                  rows="5"
                   placeholder="What are you trying to build?"
                 />
-              </label>
+              </div>
 
-              <label className="fg">
-                Email
+              <div className="partner-field">
+                <label>Email</label>
                 <input
-                  required
                   type="email"
-                  name="email"
                   placeholder="you@brand.com"
+                  required
                 />
-              </label>
+              </div>
 
-              <button className="btn-submit" type="submit">
-                Let's Build Something <span>→</span>
+              <button type="submit" className="partner-submit-btn">
+                Let's Build Something
+                <span>→</span>
               </button>
             </form>
           )}

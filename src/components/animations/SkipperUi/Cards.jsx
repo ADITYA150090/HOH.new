@@ -45,7 +45,7 @@ export default function CardStack() {
   }, []);
 
   const images = [
-    "/images/1.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDsSKcQedWs1uK4Nz-tokFTV4tjhI99lL4OptFf357JH1FBaj14svViIlu&s=10",
     "/images/2.jpg",
     "/images/3.jpg",
     "/images/4.jpg",
@@ -55,6 +55,7 @@ export default function CardStack() {
   return (
     <section ref={sectionRef} className="stack-section">
       <div className="stack-container">
+        <h1></h1>
         {images.map((img, index) => (
           <div className="stack-card" key={index}>
             <img src={img} alt="" />

@@ -1,0 +1,159 @@
+.partner-section {
+    padding: 120px 20px;
+    background: #0b0b0b;
+    color: #fff;
+}
+
+.partner-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.partner-label {
+    display: inline-block;
+    padding: 10px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 999px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    color: #cfcfcf;
+}
+
+.partner-heading {
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 0.95;
+    font-weight: 800;
+    margin-bottom: 60px;
+    max-width: 900px;
+}
+
+.partner-heading span {
+    color: #fff01f;
+}
+
+.partner-form-card {
+    max-width: 800px;
+    padding: 40px;
+    border-radius: 32px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.partner-form-heading {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.partner-form-description {
+    color: #bdbdbd;
+    margin-bottom: 35px;
+}
+
+.partner-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.partner-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.partner-field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.partner-field label {
+    font-size: 14px;
+    color: #d5d5d5;
+}
+
+.partner-field input,
+.partner-field textarea,
+.partner-field select {
+    width: 100%;
+    padding: 16px 18px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid transparent;
+    border-radius: 14px;
+    color: white;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.partner-field input:focus,
+.partner-field textarea:focus,
+.partner-field select:focus {
+    border-color: #fff01f;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.partner-field textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.partner-submit-btn {
+    width: fit-content;
+    padding: 18px 28px;
+    background: #fff01f;
+    color: #000;
+    border: none;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: 0.3s ease;
+}
+
+.partner-submit-btn:hover {
+    transform: translateY(-2px);
+}
+
+.partner-submit-btn span {
+    font-size: 18px;
+}
+
+.partner-success {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.partner-success h3 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.partner-success p {
+    color: #c7c7c7;
+}
+
+@media (max-width: 768px) {
+    .partner-section {
+        padding: 80px 20px;
+    }
+    .partner-row {
+        grid-template-columns: 1fr;
+    }
+    .partner-form-card {
+        padding: 25px;
+    }
+    .partner-heading {
+        margin-bottom: 40px;
+    }
+    .partner-submit-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

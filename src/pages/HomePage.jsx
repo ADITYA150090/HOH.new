@@ -31,15 +31,17 @@ export default function HomePage() {
       <Ticker items={cultureItems}  reverse />
       {/* <ServicesSection /> */}
       <WorkSection compact />
-      <Timeline/>
-      < ImageTicker/>
+      {/* <Timeline/> */}
+     
       {/* <WorkSectionTwo compact /> */}
     
       {/* <TestimonialsSection /> */}
       {/* <StorySection /> */}
       {/* <CommunitySection /> */}
+      < ImageTicker/>
       <OurStory/>
-      <Brands/>
+     
+      {/* <Brands/> */}
       <CardStack />
      
       {/* <PartnersBand /> */}
