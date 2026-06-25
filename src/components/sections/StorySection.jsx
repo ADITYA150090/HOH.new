@@ -2,7 +2,7 @@ import { values } from "../../data/siteData";
 
 export default function StorySection() {
   return (
-    <section id="about">
+    <section id="about" >
       <div className="max-w about-grid">
         <div className="about-story reveal">
           <div className="label">Our Story</div>

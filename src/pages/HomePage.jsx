@@ -23,7 +23,7 @@ const cultureItems = ["Events", "Creators", "Community", "Nagpur", "Youth Cultur
 export default function HomePage() {
   return (
     <main>
-      <Hero />
+      <Hero  id="home"/>
       <Ticker items={cultureItems} />
       {/* <Manifesto /> */}
       <IntroSection />

@@ -4,7 +4,7 @@ import "./Hero.css";
 
 export default function Hero() {
   return (
-    <section className="hero">
+    <section className="hero" id="home">
 
       {/* Cursor Trail */}
       <CursorImageTrail />

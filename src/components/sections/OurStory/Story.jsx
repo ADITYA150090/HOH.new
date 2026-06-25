@@ -69,7 +69,7 @@ export default function OurStory() {
   ];
 
   return (
-    <section className="story">
+    <section className="story" id="story">
     <div className="story-container">
   
       <div className="story-top">

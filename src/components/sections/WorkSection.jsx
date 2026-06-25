@@ -49,7 +49,7 @@ export default function Services() {
     : services.slice(0, 2);
 
   return (
-    <section id="services">
+    <section id="work">
       <div className="max-w">
         <div className="services-header">
           <div>

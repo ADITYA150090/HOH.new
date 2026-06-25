@@ -54,7 +54,7 @@
 }
 
 .partner-heading span {
-    color: #FFF01F;
+    color: #AD46FF;
 }
 
 .partner-text {
@@ -126,7 +126,7 @@
 .partner-field input:focus,
 .partner-field textarea:focus,
 .partner-field select:focus {
-    border-color: #FFF01F;
+    border-color: #AD46FF;
     background: white;
 }
 
@@ -140,7 +140,7 @@
     padding: 18px;
     border: none;
     border-radius: 999px;
-    background: #FFF01F;
+    background: #AD46FF;
     color: black;
     font-size: 16px;
     font-weight: 700;
