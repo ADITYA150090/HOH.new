@@ -3,18 +3,24 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Cards.css";
 
+import img1 from "../../../assets/review/1.png";
+import img2 from "../../../assets/review/2.png";
+import img3 from "../../../assets/review/3.png";
+import img4 from "../../../assets/review/4.png";
+import img5 from "../../../assets/review/5.png";
+
 gsap.registerPlugin(ScrollTrigger);
 
 export default function CardStack() {
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    const cards = gsap.utils.toArray(".stack-card");
+    const cardElements = gsap.utils.toArray(".stack-card");
 
-    cards.forEach((card, i) => {
+    cardElements.forEach((card, i) => {
       gsap.set(card, {
         rotate: gsap.utils.random(-7, 7),
-        zIndex: cards.length - i,
+        zIndex: cardElements.length - i,
       });
     });
 
@@ -22,13 +28,13 @@ export default function CardStack() {
       scrollTrigger: {
         trigger: sectionRef.current,
         start: "top top",
-        end: `+=${cards.length * 800}`,
+        end: `+=${cardElements.length * 800}`,
         pin: true,
         scrub: 1,
       },
     });
 
-    cards.forEach((card, i) => {
+    cardElements.forEach((card, i) => {
       const dir = i % 2 === 0 ? -1 : 1;
 
       tl.to(card, {
@@ -43,69 +49,14 @@ export default function CardStack() {
     return () => ScrollTrigger.getAll().forEach((t) => t.kill());
   }, []);
 
-  const cards = [
-    {
-      number: "01",
-      category: "Community",
-      title: "People Build Communities.",
-      text: "Real connections happen when people meet, create and grow together.",
-      color: "paper1",
-    },
-    {
-      number: "02",
-      category: "Events",
-      title: "Ideas Need A Stage.",
-      text: "Every meetup starts as one crazy idea before becoming something memorable.",
-      color: "paper2",
-    },
-    {
-      number: "03",
-      category: "Creators",
-      title: "Create Without Permission.",
-      text: "The internet rewards people who ship, not those who wait.",
-      color: "paper3",
-    },
-    {
-      number: "04",
-      category: "Partners",
-      title: "Build Together.",
-      text: "Great brands grow through meaningful collaborations.",
-      color: "paper4",
-    },
-    {
-      number: "05",
-      category: "Future",
-      title: "The Next Story Starts Here.",
-      text: "Join the movement shaping the future of creative communities.",
-      color: "paper5",
-    },
-  ];
+  const cards = [img1, img2, img3, img4, img5];
 
   return (
     <section ref={sectionRef} className="stack-section">
       <div className="stack-container">
-        {cards.map((card, i) => (
-          <div className={`stack-card ${card.color}`} key={i}>
-            <div className="tape tape-left"></div>
-            <div className="tape tape-right"></div>
-
-            <div className="card-top">
-              <span>{card.category}</span>
-              <span>{card.number}</span>
-            </div>
-
-            <h2>{card.title}</h2>
-            <div className="doodle doodle-lightning"></div>
-
-            <p>{card.text}</p>
-
-            <div className="card-bottom">
-              <div className="logo-circle">HOH</div>
-              <span>HOUSE OF HEARTS</span>
-              
-            </div>
-
-            <div className="scribble"></div>
+        {cards.map((img, index) => (
+          <div className="stack-card" key={index}>
+            <img src={img} alt={`Card ${index + 1}`} />
           </div>
         ))}
       </div>
