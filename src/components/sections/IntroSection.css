@@ -146,3 +146,134 @@
             transform: translateX(0);
         }
     }
+    /* ==========================================
+   RESPONSIVE
+========================================== */
+    /* Large Laptop */
+    
+    @media (max-width:1400px) {
+        .dark-section {
+            padding: 7rem 3rem;
+        }
+        .intro-grid {
+            gap: 5rem;
+        }
+        .intro-title {
+            font-size: clamp(3.5rem, 7vw, 7rem);
+        }
+    }
+    /* Laptop */
+    
+    @media (max-width:1200px) {
+        .dark-section {
+            padding: 6rem 2.5rem;
+        }
+        .intro-grid {
+            gap: 4rem;
+        }
+        .intro-copy p {
+            font-size: 1rem;
+        }
+        .img {
+            margin-left: 40px;
+            margin-top: 0;
+        }
+    }
+    /* Tablet */
+    
+    @media (max-width:992px) {
+        .dark-section {
+            padding: 5rem 2rem;
+        }
+        .intro-grid {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            text-align: center;
+        }
+        .label {
+            text-align: center;
+        }
+        .intro-title {
+            font-size: clamp(3rem, 8vw, 5rem);
+        }
+        .intro-copy {
+            align-items: center;
+        }
+        .intro-copy p {
+            max-width: 700px;
+            text-align: center;
+            font-size: 1rem;
+        }
+        .img {
+            margin: 1rem auto 0;
+            display: flex;
+            justify-content: center;
+        }
+        .img img {
+            max-width: 380px;
+        }
+    }
+    /* Mobile */
+    
+    @media (max-width:768px) {
+        .dark-section {
+            padding: 4rem 1.5rem;
+        }
+        .intro-grid {
+            gap: 2.5rem;
+        }
+        .intro-title {
+            font-size: clamp(2.6rem, 11vw, 4rem);
+            line-height: .95;
+        }
+        .intro-copy {
+            gap: 1.25rem;
+        }
+        .intro-copy p {
+            font-size: .96rem;
+            line-height: 1.75;
+        }
+        .img {
+            margin-top: 1rem;
+        }
+        .img img {
+            max-width: 300px;
+            width: 100%;
+        }
+    }
+    /* Small Phones */
+    
+    @media (max-width:576px) {
+        .dark-section {
+            padding: 3.5rem 1.2rem;
+        }
+        .label {
+            font-size: .75rem;
+        }
+        .intro-title {
+            font-size: 2.4rem;
+        }
+        .intro-copy p {
+            font-size: .9rem;
+            line-height: 1.7;
+        }
+        .img img {
+            max-width: 240px;
+        }
+    }
+    /* Extra Small Phones */
+    
+    @media (max-width:380px) {
+        .dark-section {
+            padding: 3rem 1rem;
+        }
+        .intro-title {
+            font-size: 2rem;
+        }
+        .intro-copy p {
+            font-size: .85rem;
+        }
+        .img img {
+            max-width: 200px;
+        }
+    }

@@ -95,12 +95,14 @@ export default function CardStack() {
             </div>
 
             <h2>{card.title}</h2>
+            <div className="doodle doodle-lightning"></div>
 
             <p>{card.text}</p>
 
             <div className="card-bottom">
               <div className="logo-circle">HOH</div>
               <span>HOUSE OF HEARTS</span>
+              
             </div>
 
             <div className="scribble"></div>

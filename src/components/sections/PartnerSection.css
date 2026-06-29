@@ -1,204 +1,297 @@
+/* ===========================
+   GOOGLE FONTS
+=========================== */
+
+
+/* Import Anton + Inter in index.html
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+*/
+
+
+/* ===========================
+   SECTION
+=========================== */
+
 .partner-section {
-    background: #0b0b0b;
-    padding: 120px 5%;
-    background-color: #0b0b0b;
+    background: #E8E5EB;
+    padding: 120px 6%;
+    overflow: hidden;
 }
 
 .partner-container {
-    max-width: 1400px;
+    max-width: 1450px;
     margin: auto;
     display: grid;
-    grid-template-columns: 1fr 520px;
-    gap: 80px;
+    grid-template-columns: 1.05fr .95fr;
+    gap: 90px;
     align-items: center;
 }
 
 
-/* LEFT */
+/* ===========================
+   LEFT
+=========================== */
 
 .partner-left {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-}
-
-.partner-label {
-    display: inline-flex;
-    align-items: center;
-    padding: 10px 18px;
-    border-radius: 999px;
-    border: 1px solid rgba(255, 255, 255, .15);
-    color: #d5d5d5;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 14px;
-}
-
-.partner-image {
-    width: 100%;
-    margin: 40px 0;
-}
-
-.partner-image img {
-    width: 100%;
-    max-width: 500px;
-    display: block;
 }
 
 .partner-heading {
-    font-size: clamp(3rem, 6vw, 5.5rem);
-    line-height: .95;
-    color: white;
-    font-weight: 800;
-    margin-bottom: 25px;
+    font-family: "Anton", sans-serif;
+    font-size: clamp(5rem, 9vw, 8rem);
+    line-height: .82;
+    text-transform: uppercase;
+    color: #17151C;
+    letter-spacing: 1px;
+    margin-bottom: 35px;
 }
 
 .partner-heading span {
-    color: #AD46FF;
+    display: block;
+    color: #4F3598;
+    font-style: italic;
+    transform: skew(-8deg);
 }
 
-.partner-text {
-    color: #bdbdbd;
-    font-size: 17px;
-    line-height: 1.8;
-    max-width: 520px;
+.partner-description {
+    max-width: 570px;
+    color: #17151C;
+    font-size: 24px;
+    line-height: 1.45;
+    font-weight: 700;
+    margin-bottom: 50px;
 }
 
 
-/* RIGHT CARD */
+/* ===========================
+   IMAGE
+=========================== */
 
-.partner-form-card {
+.partner-image {
+    width: 100%;
+    max-width: 560px;
+    border: 4px solid #222;
     background: white;
-    border-radius: 30px;
-    padding: 45px;
-    box-shadow: 0 25px 80px rgba(0, 0, 0, .25);
+    box-shadow: 10px 10px 0 #222;
+    overflow: hidden;
 }
 
-.partner-form-heading {
-    color: #111;
-    font-size: 32px;
-    margin-bottom: 10px;
+.partner-image img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
 }
 
-.partner-form-description {
-    color: #777;
-    margin-bottom: 30px;
+
+/* ===========================
+   FORM CARD
+=========================== */
+
+.partner-card {
+    position: relative;
+    background: #F8F5F8;
+    border: 4px solid #222;
+    padding: 40px;
+    box-shadow: 10px 10px 0 #222;
 }
+
+
+/* ===========================
+   FLOATING TAG
+=========================== */
+
+.partner-tag {
+    position: absolute;
+    top: -20px;
+    left: 18px;
+    background: #EEFF4E;
+    border: 3px solid #222;
+    padding: 10px 18px;
+    font-weight: 800;
+    font-size: 15px;
+    text-transform: uppercase;
+    transform: rotate(2deg);
+}
+
+
+/* ===========================
+   FORM
+=========================== */
 
 .partner-form {
     display: flex;
     flex-direction: column;
-    gap: 22px;
+    gap: 28px;
 }
 
-.partner-row {
+.row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
-.partner-field {
+.field {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.partner-field label {
-    color: #444;
-    font-size: 14px;
-    font-weight: 600;
+.field label {
+    font-size: 13px;
+    font-weight: 800;
+    color: #111;
+    text-transform: uppercase;
+    letter-spacing: .7px;
+    font-family: Inter, sans-serif;
 }
 
-.partner-field input,
-.partner-field textarea,
-.partner-field select {
+
+/* ===========================
+   INPUTS
+=========================== */
+
+.field input,
+.field textarea {
     width: 100%;
     padding: 16px;
-    border-radius: 14px;
-    border: 1px solid #ddd;
-    background: #f8f8f8;
-    color: #111;
+    background: #F8F5F8;
+    border: 3px solid #222;
     outline: none;
-    transition: .3s;
-    font-size: 15px;
-}
-
-.partner-field input:focus,
-.partner-field textarea:focus,
-.partner-field select:focus {
-    border-color: #AD46FF;
-    background: white;
-}
-
-.partner-field textarea {
-    resize: vertical;
-    min-height: 140px;
-}
-
-.partner-submit-btn {
-    width: 100%;
-    padding: 18px;
-    border: none;
-    border-radius: 999px;
-    background: #AD46FF;
-    color: black;
     font-size: 16px;
-    font-weight: 700;
+    font-family: Inter, sans-serif;
+    transition: .2s;
+    resize: none;
+}
+
+.field textarea {
+    min-height: 170px;
+}
+
+.field input:focus,
+.field textarea:focus {
+    border-color: #4F3598;
+}
+
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.submit-btn {
+    width: 100%;
+    padding: 22px;
+    background: #4F3598;
+    color: white;
+    border: 3px solid #222;
     cursor: pointer;
-    transition: .3s;
+    font-family: "Anton", sans-serif;
+    font-size: 42px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 7px 7px 0 #222;
+    transition: .18s;
 }
 
-.partner-submit-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(255, 240, 31, .35);
+.submit-btn:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 11px 11px 0 #222;
 }
 
-.partner-success {
+
+/* ===========================
+   SUCCESS
+=========================== */
+
+.success-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 520px;
     text-align: center;
-    padding: 80px 20px;
 }
 
-.partner-success h3 {
-    color: #111;
-    font-size: 32px;
-    margin-bottom: 10px;
+.success-box h3 {
+    font-family: "Anton", sans-serif;
+    font-size: 64px;
+    margin-bottom: 15px;
+    color: #17151C;
 }
 
-.partner-success p {
-    color: #666;
+.success-box p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #444;
 }
 
 
-/* MOBILE */
+/* ===========================
+   TABLET
+=========================== */
 
-@media (max-width: 1024px) {
+@media (max-width:1100px) {
     .partner-container {
         grid-template-columns: 1fr;
-        gap: 60px;
+        gap: 70px;
     }
     .partner-left {
         align-items: center;
         text-align: center;
     }
-    .partner-image img {
-        max-width: 350px;
+    .partner-description {
+        max-width: 700px;
     }
-    .partner-form-card {
+    .partner-image {
+        max-width: 600px;
+    }
+    .partner-card {
         width: 100%;
     }
 }
 
-@media (max-width: 768px) {
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:768px) {
     .partner-section {
-        padding: 80px 20px;
+        padding: 70px 22px;
     }
-    .partner-row {
+    .partner-container {
+        gap: 60px;
+    }
+    .partner-heading {
+        font-size: 4.5rem;
+    }
+    .partner-description {
+        font-size: 18px;
+        margin-bottom: 35px;
+    }
+    .partner-image {
+        box-shadow: 6px 6px 0 #222;
+    }
+    .partner-card {
+        padding: 28px;
+        box-shadow: 6px 6px 0 #222;
+    }
+    .row {
         grid-template-columns: 1fr;
     }
-    .partner-form-card {
-        padding: 30px;
+    .submit-btn {
+        font-size: 26px;
+        padding: 18px;
     }
-    .partner-submit-btn {
-        width: 100%;
+    .partner-tag {
+        left: 14px;
+        top: -18px;
+        font-size: 12px;
+    }
+    .success-box h3 {
+        font-size: 42px;
     }
 }

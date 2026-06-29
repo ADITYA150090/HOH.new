@@ -350,6 +350,7 @@ button {
 }
 
 .btn {
+    color: #000d1a;
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -1304,6 +1305,7 @@ button {
     }
     .btn {
         justify-content: center;
+        color: #000d1a;
     }
     .stats-grid,
     .insta-grid,

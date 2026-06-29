@@ -1,123 +1,101 @@
 import { useState } from "react";
 import "./PartnerSection.css";
 
-
-import Letter from "../../assets/Texture/Letter.png"
-
-const partnershipTypes = [
-  "Event Partner",
-  "Content Partner",
-  "Community Partner",
-  "Creator Campaign",
-  "Not sure yet",
-];
+import Letter from "../../assets/Texture/Letter.png";
 
 export default function PartnerSection() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setIsSubmitted(true);
+    setSubmitted(true);
   };
 
   return (
     <section className="partner-section" id="partner">
       <div className="partner-container">
 
-        {/* Left Side */}
+        {/* LEFT */}
+
         <div className="partner-left">
 
-          <span className="partner-label">
-            Partner With Us
-          </span>
-
-          <div className="partner-image">
-            {/* Replace with your image */}
-            <img
-              src={Letter}
-              alt="Partner Illustration"
-            />
-          </div>
-
           <h2 className="partner-heading">
-            You need to reach
+            JOIN THE
             <br />
-            Nagpur's youth.
-            <br />
-            <span>We already have them.</span>
+            <span>CHAOS.</span>
           </h2>
 
-          <p className="partner-text">
+          <p className="partner-description">
             Whether you're launching a brand, hosting an event,
-            or building a community, we'll help you connect with
-            thousands of students and young professionals.
+            building a community, or creating something exciting,
+            we'll help you connect with thousands of students and
+            young professionals. Let's talk about your idea.
           </p>
+
+          <div className="partner-image">
+            <img src={Letter} alt="Letter Bird" />
+          </div>
 
         </div>
 
-        {/* Right Side */}
-        <div className="partner-form-card">
+        {/* RIGHT */}
 
-          {isSubmitted ? (
-            <div className="partner-success">
-              <h3>Message Sent 🎉</h3>
-              <p>We'll get back to you within 24 hours.</p>
-            </div>
-          ) : (
-            <form className="partner-form" onSubmit={handleSubmit}>
+        <div className="partner-card">
 
-              <h3 className="partner-form-heading">
-                Let's Talk
-              </h3>
+          <div className="partner-tag">
+            LET'S TALK
+          </div>
 
-              <p className="partner-form-description">
-                Tell us about your idea.
+          {submitted ? (
+
+            <div className="success-box">
+
+              <h3>MESSAGE SENT!</h3>
+
+              <p>
+                We'll get back to you within
+                24 hours.
               </p>
 
-              <div className="partner-row">
+            </div>
 
-                <div className="partner-field">
-                  <label>Your Name</label>
+          ) : (
+
+            <form
+              className="partner-form"
+              onSubmit={handleSubmit}
+            >
+
+              <div className="row">
+
+                <div className="field">
+
+                  <label>YOUR NAME</label>
 
                   <input
                     type="text"
                     placeholder="Rohan Sharma"
                     required
                   />
+
                 </div>
 
-                <div className="partner-field">
-                  <label>Brand / Organisation</label>
+                <div className="field">
+
+                  <label>BRAND / ORG</label>
 
                   <input
                     type="text"
                     placeholder="Your Brand"
                   />
+
                 </div>
 
               </div>
 
-              <div className="partner-field">
+              <div className="field">
 
-                <label>Partnership Type</label>
-
-                <select required defaultValue="">
-                  <option value="" disabled>
-                    Select one...
-                  </option>
-
-                  {partnershipTypes.map((type) => (
-                    <option key={type}>
-                      {type}
-                    </option>
-                  ))}
-                </select>
-
-              </div>
-
-              <div className="partner-field">
-
-                <label>Email</label>
+                <label>EMAIL</label>
 
                 <input
                   type="email"
@@ -127,25 +105,26 @@ export default function PartnerSection() {
 
               </div>
 
-              <div className="partner-field">
+              <div className="field">
 
-                <label>Your Goal or Idea</label>
+                <label>WHAT'S THE PLAN?</label>
 
                 <textarea
-                  rows="5"
-                  placeholder="Tell us about your partnership..."
+                  rows={6}
+                  placeholder="Tell us about your project..."
                 />
 
               </div>
 
               <button
+                className="submit-btn"
                 type="submit"
-                className="partner-submit-btn"
               >
-                Let's Build Something →
+                LET'S BUILD SOMETHING
               </button>
 
             </form>
+
           )}
 
         </div>
