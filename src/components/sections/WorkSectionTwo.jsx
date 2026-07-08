@@ -1,203 +1,128 @@
-import { useState, useRef } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
-
-import "swiper/css";
-import "swiper/css/navigation";
-
+import { useState } from "react";
 import "./WorkSectionTwo.css";
 
-const projects = [
+const workItems = [
   {
-    id: "villa",
-    title: "Villa Project",
-    category: "architecture",
-    desc: "Luxury architecture and interior visualization for modern living.",
-    image:
-      "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=1600",
+    date: "Dec '23",
+    title: "Instagram Launch & Carousel Series",
+    desc: "Launched HoH on Instagram with a digital magazine approach — carousels crafted with city designers and writers. Built audience through pure content resonance.",
+    metrics: ["Organic Growth", "City-wide Reach"],
   },
   {
-    id: "drone",
-    title: "Drone Cinematics",
-    category: "film",
-    desc: "High-end FPV footage and cinematic storytelling.",
-    image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1600",
+    date: "Feb '24",
+    title: "HOH Creator Carnival",
+    desc: "Nagpur's first creator-led fair. 8 content creators in panel discussions on youth and culture, 20 stalls, live music — built from scratch with zero prior event experience.",
+    metrics: ["2,000 Footfall", "8 Creators", "20 Stalls", "200K Reach"],
   },
   {
-    id: "travel",
-    title: "Travel Campaign",
-    category: "branding",
-    desc: "Creative direction and visual identity for tourism brands.",
-    image:
-      "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=1600",
+    date: "Mid '24",
+    title: "Book Exchange at RBU",
+    desc: "A first-of-its-kind literary experience in Nagpur, partnering with Ramdeobaba University, local book communities, and RBU's Literary Club.",
+    metrics: ["60+ Paid Attendees", "Sold Out"],
   },
   {
-    id: "resort",
-    title: "Resort Branding",
-    category: "branding",
-    desc: "Brand strategy, photography and digital experience.",
-    image:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1600",
+    date: "Oct '24",
+    title: "No Solo Tribe Halloween",
+    desc: "Full-spectrum partner for Nagpur's biggest Halloween event — owning planning, social media, influencer marketing, sponsorship outreach, and on-ground support.",
+    metrics: ["5,000+ Footfall","5 Major Sponsors","20 Stalls","100K+ Reach"],
+  },
+  {
+    date: "Dec '24",
+    title: "NGP Spotlight × The Beer Café",
+    desc: "3-night brand activation for India's largest alco-beverage chain's 3rd anniversary. Open Mic night, Creator Evening, and a Bollywood Hip-Hop DJ Night.",
+    metrics: ["100K+ Reach","150 Over 3 Nights","Record Brand UGC"],
+  },
+  {
+    date: "Jun '25",
+    title: "HOH Art Popup × Corridor Seven",
+    desc: "Two-day, six-workshop cultural experience: zine making, log painting, theatre, journaling, content storytelling, and film screening — all sold out.",
+    metrics: ["6 Workshops","All Sold Out","Lakhs in Brand Reach"],
+  },
+  {
+    date: "Oct '25",
+    title: "TEDxNagpur 2025 — Content & Community Partner",
+    desc: "Official partner for Nagpur's first independently licensed TEDx. End-to-end creative direction, Nagpur Naama Series, sponsor acquisition, influencer campaigns, volunteer deployment, and live content production.",
+    metrics: ["15 Real-time Pieces","City-wide Marketing","Debut Event Milestone"],
+  },
+  {
+    date: "Oct '25",
+    title: "Dilwali Party",
+    desc: "Community-demanded Diwali celebration. Tickets sold before the event was even publicly announced. Pulled off in under 10 days. The creative went viral at 60K views.",
+    metrics: ["100+ Tickets","60K Viral Reach","Venue Record Sales"],
+  },
+  {
+    date: "Dec '25",
+    title: "HOH Got Latent × Traders Café",
+    desc: "A spinoff of India's Got Latent. 5 prominent city panelists, 15 selected performers from 50+ applicants, 100+ registrations in under 5 days. Housefull — café's highest-ever crowd.",
+    metrics: ["Housefull","100+ Registrations","Lakhs in Reach"],
   },
 ];
 
 export default function WorkSectionTwo() {
-  const [active, setActive] = useState(null); // active project (with id)
-  const [rect, setRect] = useState(null); // current animation bounding box
-  const [closing, setClosing] = useState(false);
-  const cardRefs = useRef({});
-  const swiperRef = useRef(null);
+  const [showAll, setShowAll] = useState(false);
 
-  const openCard = (project, e) => {
-    // pause autoplay while a card is expanded
-    swiperRef.current?.autoplay?.stop();
+  const displayedItems = showAll ? workItems : workItems.slice(0,3);
 
-    const cardEl = e.currentTarget;
-    const bounds = cardEl.getBoundingClientRect();
-    setRect(bounds);
-    setActive(project);
-    // next frame: trigger the expand animation
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        setRect(null); // null rect = animate to fullscreen state
-      });
-    });
-  };
-
-  const closeCard = () => {
-    const originEl = cardRefs.current[active.id];
-    if (originEl) {
-      const bounds = originEl.getBoundingClientRect();
-      setClosing(true);
-      setRect(bounds); // animate back down to the card's position
-      setTimeout(() => {
-        setActive(null);
-        setRect(null);
-        setClosing(false);
-        // resume autoplay after closing
-        swiperRef.current?.autoplay?.start();
-      }, 600);
-    } else {
-      setActive(null);
-      swiperRef.current?.autoplay?.start();
-    }
+  const scrollToPartner = () => {
+    document.getElementById("partner")?.scrollIntoView({behavior:"smooth"});
   };
 
   return (
-    <section className="portfolio">
-      <Swiper
-        modules={[Navigation, Autoplay]}
-        onSwiper={(swiper) => (swiperRef.current = swiper)}
-        centeredSlides
-        loop
-        loopAdditionalSlides={projects.length}
-        slidesPerGroup={1}
-        watchSlidesProgress
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
-        }}
-        grabCursor
-        slidesPerView={1.7}
-        spaceBetween={-220}
-        speed={900}
-        className="portfolio-swiper"
-      >
-        {projects.map((project, index) => (
-          <SwiperSlide key={project.id}>
-            <div
-              ref={(el) => {
-                if (el) cardRefs.current[project.id] = el;
-              }}
-              className="portfolio-card"
-              onClick={(e) => openCard(project, e)}
-              style={{
-                backgroundImage: `url(${project.image})`,
-                visibility:
-                  active?.id === project.id && !closing
-                    ? "hidden"
-                    : "visible",
-              }}
-            >
-              <div className="portfolio-overlay" />
+    <section id="work" className="work-section">
+      <div className="work-container">
+        <p className="work-label">Portfolio</p>
 
-              <div className="portfolio-content">
-                <span className="eyebrow">
-                  {String(index + 1).padStart(2, "0")} /{" "}
-                  {String(projects.length).padStart(2, "0")} —{" "}
-                  {project.category}
-                </span>
-                <h2>{project.title}</h2>
-                <div className="divider" />
-                <p>{project.desc}</p>
-                <div className="cta">
-                  <span>View project</span>
-                  <span>→</span>
+        <h2 className="work-heading">
+          Everything we've built.<br />
+          <span>All of it real.</span>
+        </h2>
+
+        <p className="work-subtitle">
+          No paid campaigns. No manufactured numbers. Every project below is proof
+          of what's possible when a community trusts you enough to show up.
+        </p>
+
+        <div className="work-timeline">
+          {displayedItems.map((item,index)=>(
+            <div className="work-item" key={index}>
+              <div className="work-date">{item.date}</div>
+
+              <div className="work-info">
+                <h3 className="work-name">{item.title}</h3>
+                <p className="work-desc">{item.desc}</p>
+
+                <div className="work-metrics">
+                  {item.metrics.map((metric,i)=>(
+                    <span className="work-metric" key={i}>{metric}</span>
+                  ))}
                 </div>
               </div>
             </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-
-      {active && (
-        <div
-          className={`portfolio-expanded-backdrop ${
-            rect ? "" : "backdrop-visible"
-          }`}
-          onClick={closeCard}
-        >
-          <div
-            className="portfolio-expanded-card"
-            onClick={(e) => e.stopPropagation()}
-            style={
-              rect
-                ? {
-                    position: "fixed",
-                    top: rect.top,
-                    left: rect.left,
-                    width: rect.width,
-                    height: rect.height,
-                    borderRadius: "12px",
-                    transform: "scale(1)",
-                  }
-                : {
-                    position: "fixed",
-                    top: 0,
-                    left: 0,
-                    width: "100vw",
-                    height: "100vh",
-                    borderRadius: "0px",
-                  }
-            }
-          >
-            <div
-              className="portfolio-card-inner"
-              style={{ backgroundImage: `url(${active.image})` }}
-            >
-              <div className="portfolio-overlay" />
-              <button className="close-btn" onClick={closeCard}>
-                <span>close</span>
-                <span className="close-x">×</span>
-              </button>
-              <div className="portfolio-content">
-                <span className="eyebrow">
-                  {String(
-                    projects.findIndex((p) => p.id === active.id) + 1
-                  ).padStart(2, "0")}{" "}
-                  / {String(projects.length).padStart(2, "0")} —{" "}
-                  {active.category}
-                </span>
-                <h2>{active.title}</h2>
-                <div className="divider" />
-                <p>{active.desc}</p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
-      )}
+
+        {!showAll && (
+          <div className="work-see-more">
+            <button className="work-btn-outline" onClick={()=>setShowAll(true)}>
+              See More Events ↓
+            </button>
+          </div>
+        )}
+
+        {showAll && (
+          <div className="work-see-more">
+            <button className="work-btn-outline" onClick={()=>setShowAll(false)}>
+              See Less ↑
+            </button>
+          </div>
+        )}
+
+        <div className="work-btn-wrap">
+          <button className="work-btn" onClick={scrollToPartner}>
+            Want Results Like These? <span>→</span>
+          </button>
+        </div>
+      </div>
     </section>
   );
 }

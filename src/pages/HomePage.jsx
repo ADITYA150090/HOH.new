@@ -14,7 +14,7 @@ import Brands from "../components/sections/Brands/Brands";
 import Ticker from "../components/ui/Ticker";
 import WorkSection from "../components/sections/WorkSection";
 import ImageTicker from "../components/animations/ImageTicker/ImageTicker";
-// import WorkSectionTwo from "../components/sections/WorkSectionTwo";
+import WorkSectionTwo from "../components/sections/WorkSectionTwo";
 import CardStack from "../components/animations/SkipperUi/Cards";
 import Timeline from "../components/Events/Events";
 
@@ -33,13 +33,14 @@ export default function HomePage() {
       <WorkSection compact />
       {/* <Timeline/> */}
      
-      {/* <WorkSectionTwo compact /> */}
+   
     
       {/* <TestimonialsSection /> */}
       {/* <StorySection /> */}
       {/* <CommunitySection /> */}
       < ImageTicker/>
       <OurStory/>
+      <WorkSectionTwo compact />
      
       {/* <Brands/> */}
       <CardStack />
