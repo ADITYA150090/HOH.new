@@ -3,26 +3,27 @@ import "./Loader.css";
 
 export default function Loader() {
   const [visible, setVisible] = useState(true);
-const [exit, setExit] = useState(false);
+  const [exit, setExit] = useState(false);
 
-useEffect(() => {
-  // Start shutter animation
-  const exitTimer = setTimeout(() => {
-    setExit(true);
-  }, 2500);
+  useEffect(() => {
+    // Start shutter animation
+    const exitTimer = setTimeout(() => {
+      setExit(true);
+    }, 2400);
 
-  // Remove loader after animation
-  const removeTimer = setTimeout(() => {
-    setVisible(false);
-  }, 3700);
+    // Remove loader after animation
+    const removeTimer = setTimeout(() => {
+      setVisible(false);
+    }, 3600);
 
-  return () => {
-    clearTimeout(exitTimer);
-    clearTimeout(removeTimer);
-  };
-}, []);
+    return () => {
+      clearTimeout(exitTimer);
+      clearTimeout(removeTimer);
+    };
+  }, []);
 
-if (!visible) return null;
+  if (!visible) return null;
+
   return (
     <div className={`loader ${exit ? "loader-exit" : ""}`}>
       <div className="action-space">
@@ -40,23 +41,23 @@ if (!visible) return null;
 
         <div className="cube-panel">
           <div className="face f-f">
-            <span className="content">Wait</span>
+            <span className="content">Work</span>
           </div>
 
           <div className="face f-b">
-            <span className="content">Load</span>
-          </div>
-
-          <div className="face f-r">
-            <span className="content">Load</span>
-          </div>
-
-          <div className="face f-l">
             <span className="content">Ing</span>
           </div>
 
+          <div className="face f-r">
+            <span className="content">On</span>
+          </div>
+
+          <div className="face f-l">
+            <span className="content">It</span>
+          </div>
+
           <div className="face f-t">
-            <span className="content">Now</span>
+            <span className="content">HOH</span>
           </div>
 
           <div className="face f-bt">
@@ -64,7 +65,8 @@ if (!visible) return null;
           </div>
         </div>
 
-        <div className="onomatopoeia">BOOM!</div>
+        <div className="onomatopoeia">BOOM....</div>
+        {/* <div className="loader-bottom-text">WORKING ON IT...</div> */}
 
       </div>
     </div>

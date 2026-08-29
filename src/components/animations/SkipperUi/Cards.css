@@ -18,39 +18,155 @@
 
 .stack-card {
     position: absolute;
-    width: min(1100px, 88vw);
+    width: min(1080px, 86vw);
+    min-height: 380px;
+    padding: 44px 52px;
+    border-radius: 32px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22), 0 8px 24px rgba(0, 0, 0, 0.12);
     will-change: transform, opacity;
     transform-origin: center center;
     cursor: default;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid rgba(0, 0, 0, 0.12);
 }
 
-.stack-card img {
+.card-quote-mark {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 8rem;
+    line-height: 0.6;
+    font-weight: 900;
+    opacity: 0.95;
+    user-select: none;
+    pointer-events: none;
+}
+
+.card-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    z-index: 2;
+    margin-top: 24px;
+}
+
+.card-left-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.card-quote-text {
+    font-family: "Inter", sans-serif;
+    font-size: clamp(1.15rem, 2.2vw, 1.55rem);
+    line-height: 1.5;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    margin: 0;
+}
+
+.card-author-block {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.author-title-line {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.author-name {
+    font-family: "Inter", sans-serif;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.author-stars {
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+    color: currentColor;
+}
+
+.author-role {
+    font-family: "Inter", sans-serif;
+    font-size: clamp(0.9rem, 1.4vw, 1.1rem);
+    font-weight: 500;
+    opacity: 0.85;
+}
+
+.card-avatar-frame {
+    width: 220px;
+    height: 250px;
+    flex-shrink: 0;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    border: 3px solid rgba(0, 0, 0, 0.15);
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.card-avatar-img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
     user-select: none;
     pointer-events: none;
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18), 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 
-/* Tablet */
+/* Tablet Layout */
 
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
     .stack-card {
         width: 92vw;
+        padding: 32px 36px;
+        border-radius: 24px;
+        min-height: 340px;
+    }
+    .card-quote-mark {
+        font-size: 6rem;
+        top: 16px;
+        left: 28px;
+    }
+    .card-avatar-frame {
+        width: 160px;
+        height: 180px;
     }
 }
 
 
-/* Mobile */
+/* Mobile Layout */
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
     .stack-card {
-        width: 95vw;
+        width: 94vw;
+        padding: 28px 24px;
+        border-radius: 20px;
     }
-    .stack-card img {
-        border-radius: 14px;
+    .card-inner {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .card-quote-mark {
+        font-size: 4.5rem;
+        top: 10px;
+        left: 18px;
+    }
+    .card-avatar-frame {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
     }
 }

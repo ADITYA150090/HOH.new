@@ -29,7 +29,7 @@
     height: 80px;
     background: #7095d6;
     z-index: 1;
-    clip-path: polygon( 0% 100%, 0% 35%, 15% 10%, 28% 55%, 42% 30%, 58% 55%, 70% 20%, 82% 60%, 94% 15%, 100% 25%, 100% 100%);
+    clip-path: polygon(0% 100%, 0% 35%, 15% 10%, 28% 55%, 42% 30%, 58% 55%, 70% 20%, 82% 60%, 94% 15%, 100% 25%, 100% 100%);
 }
 
 
@@ -43,7 +43,7 @@
     height: 60px;
     background: #8bb9b8;
     z-index: 2;
-    clip-path: polygon( 0% 100%, 0% 45%, 16% 15%, 34% 60%, 52% 30%, 70% 65%, 86% 20%, 100% 50%, 100% 100%);
+    clip-path: polygon(0% 100%, 0% 45%, 16% 15%, 34% 60%, 52% 30%, 70% 65%, 86% 20%, 100% 50%, 100% 100%);
 }
 
 .ft-grid,
@@ -112,7 +112,13 @@
 }
 
 .ft-cta {
-    margin-top: 24px;
+    margin-top: 200px;
+}
+
+.commune-small-btn {
+    font-size: 0.85rem !important;
+    letter-spacing: 0.05em;
+    font-weight: 700;
 }
 
 .ft-bottom {
@@ -136,10 +142,12 @@
     #footer {
         padding: 120px 24px 24px;
     }
+
     .ft-grid {
         grid-template-columns: 1fr;
         gap: 32px;
     }
+
     .ft-bottom {
         flex-direction: column;
         gap: 12px;

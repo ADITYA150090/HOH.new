@@ -1,10 +1,10 @@
-import CommunitySection from "../components/sections/CommunitySection";
+import IntroSection from "../components/sections/IntroSection";
 import StatsSection from "../components/sections/StatsSection";
 
 export default function CommunityPage() {
   return (
     <main className="page-pad">
-      <CommunitySection />
+      <IntroSection />
       <StatsSection />
     </main>
   );

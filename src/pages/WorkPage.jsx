@@ -1,13 +1,11 @@
-import PartnersBand from "../components/sections/PartnersBand";
-import TestimonialsSection from "../components/sections/TestimonialsSection";
 import WorkSection from "../components/sections/WorkSection";
+import WorkSectionTwo from "../components/sections/WorkSectionTwo";
 
 export default function WorkPage() {
   return (
     <main className="page-pad">
       <WorkSection />
-      <TestimonialsSection />
-      <PartnersBand />
+      <WorkSectionTwo />
     </main>
   );
 }

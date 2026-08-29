@@ -11,16 +11,17 @@ export default function Footer({ routes }) {
 
       <div className="max-w ft-grid">
         <div className="ft-brand">
-          <div className="ft-brand-name">  
-          <img className="logo-hoh" src={logo} alt="HoH Logo" />
+          <div className="ft-brand-name">
+            <img className="logo-hoh" src={logo} alt="HoH Logo" />
           </div>
 
           <p className="ft-tagline">
             Nagpur's youth culture community. Building the spaces, content,
             and experiences that define what it means to be young and creative
             in this city.
-          </p>
-
+            <br />
+          </p><a>Say Hi!</a>
+          <br />
           <a className="ft-email" href="mailto:hello@moramba.in">
             hello@moramba.in
           </a>
@@ -88,7 +89,7 @@ export default function Footer({ routes }) {
 
           <div className="ft-cta">
             <Button href="https://www.instagram.com/hoh.commune/">
-            hoh.commune
+              <span className="commune-small-btn">@hoh.commune</span>
             </Button>
           </div>
         </div>

@@ -43,25 +43,15 @@ const images = [
 export default function ImageTicker() {
   return (
     <div className="ticker-wrapper">
-      {/* Row 1 */}
       <div className="ticker">
-      <div className="ticker-track left">
-  {[...images, ...images].map((img, i) => (
-    <div key={i} className="ticker-item">
-      <img src={img} alt="" className="ticker-img" />
-    </div>
-  ))}
-</div>
-      </div>
-
-      {/* Row 2 */}
-      {/* <div className="ticker">
-        <div className="ticker-track right">
+        <div className="ticker-track left">
           {[...images, ...images].map((img, i) => (
-            <img key={i} src={img} alt="" className="ticker-img" />
+            <div key={i} className="ticker-item">
+              <img src={img} alt={`Brand logo ${(i % images.length) + 1}`} className="ticker-img" />
+            </div>
           ))}
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }

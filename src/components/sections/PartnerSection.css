@@ -1,88 +1,142 @@
 /* ===========================
-   GOOGLE FONTS
-=========================== */
-
-
-/* Import Anton + Inter in index.html
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-*/
-
-
-/* ===========================
-   SECTION
+   JOIN THE CHAOS - PARTNER SECTION
 =========================== */
 
 .partner-section {
-    background: #E8E5EB;
-    padding: 120px 6%;
+    background: #0d0c12;
+    color: #ffffff;
+    padding: 100px 6%;
     overflow: hidden;
+    position: relative;
+    border-top: 3px solid #222;
 }
 
 .partner-container {
-    max-width: 1450px;
+    max-width: 1400px;
     margin: auto;
     display: grid;
-    grid-template-columns: 1.05fr .95fr;
-    gap: 90px;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
     align-items: center;
 }
 
 
 /* ===========================
-   LEFT
+   LEFT COLUMN
 =========================== */
 
 .partner-left {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+}
+
+.partner-badge {
+    background: #EEFF4E;
+    color: #0d0c12;
+    font-family: "Anton", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    padding: 6px 16px;
+    border: 2px solid #000;
+    box-shadow: 3px 3px 0 #000;
+    margin-bottom: 24px;
+    transform: rotate(-2deg);
+    display: inline-block;
 }
 
 .partner-heading {
     font-family: "Anton", sans-serif;
-    font-size: clamp(5rem, 9vw, 8rem);
-    line-height: .82;
+    font-size: clamp(4.5rem, 8.5vw, 7.5rem);
+    line-height: .86;
     text-transform: uppercase;
-    color: #17151C;
+    color: #ffffff;
     letter-spacing: 1px;
-    margin-bottom: 35px;
+    margin-bottom: 28px;
 }
 
 .partner-heading span {
     display: block;
-    color: #4F3598;
-    font-style: italic;
-    transform: skew(-8deg);
+    color: #df5dbc;
+    font-style: normal;
+    text-shadow: 4px 4px 0px #000;
 }
 
 .partner-description {
-    max-width: 570px;
-    color: #17151C;
-    font-size: 24px;
-    line-height: 1.45;
-    font-weight: 700;
-    margin-bottom: 50px;
+    max-width: 580px;
+    color: rgba(255, 255, 255, 0.88);
+    font-family: "Inter", sans-serif;
+    font-size: 19px;
+    line-height: 1.55;
+    font-weight: 500;
+    margin-bottom: 36px;
 }
 
 
-/* ===========================
-   IMAGE
-=========================== */
+/* Contact Cards */
+
+.partner-contact-cards {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    background: #181724;
+    border: 3px solid #EEFF4E;
+    padding: 14px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 4px 4px 0px #000;
+}
+
+.contact-card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 7px 7px 0px #EEFF4E;
+}
+
+.contact-label {
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    color: #EEFF4E;
+    letter-spacing: 0.1em;
+}
+
+.contact-value {
+    font-family: "Anton", sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    letter-spacing: 0.04em;
+}
+
+.contact-value.commune-tag {
+    font-size: 14px;
+    font-weight: 600;
+    color: #df5dbc;
+}
+
+
+/* Partner Graphic Image */
 
 .partner-image {
     width: 100%;
-    max-width: 560px;
-    border: 4px solid #222;
-    background: white;
-    box-shadow: 10px 10px 0 #222;
+    max-width: 480px;
+    border: 4px solid #EEFF4E;
+    background: #181724;
+    box-shadow: 8px 8px 0 #000;
     overflow: hidden;
+    border-radius: 12px;
 }
 
 .partner-image img {
     display: block;
     width: 100%;
+    max-height: 240px;
     object-fit: cover;
 }
 
@@ -93,39 +147,38 @@
 
 .partner-card {
     position: relative;
-    background: #F8F5F8;
-    border: 4px solid #222;
-    padding: 40px;
-    box-shadow: 10px 10px 0 #222;
+    background: #161521;
+    border: 4px solid #ffffff;
+    padding: 44px;
+    box-shadow: 12px 12px 0 #EEFF4E;
+    border-radius: 16px;
 }
 
 
-/* ===========================
-   FLOATING TAG
-=========================== */
+/* Floating Tag */
 
 .partner-tag {
     position: absolute;
     top: -20px;
-    left: 18px;
+    left: 24px;
     background: #EEFF4E;
-    border: 3px solid #222;
-    padding: 10px 18px;
-    font-weight: 800;
-    font-size: 15px;
+    color: #000000;
+    border: 3px solid #000;
+    padding: 8px 18px;
+    font-family: "Anton", sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     transform: rotate(2deg);
 }
 
 
-/* ===========================
-   FORM
-=========================== */
+/* Form Inputs */
 
 .partner-form {
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: 24px;
 }
 
 .row {
@@ -137,161 +190,132 @@
 .field {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
 }
 
 .field label {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 800;
-    color: #111;
+    color: #EEFF4E;
     text-transform: uppercase;
-    letter-spacing: .7px;
-    font-family: Inter, sans-serif;
+    letter-spacing: 1px;
+    font-family: "Inter", sans-serif;
 }
-
-
-/* ===========================
-   INPUTS
-=========================== */
 
 .field input,
 .field textarea {
     width: 100%;
     padding: 16px;
-    background: #F8F5F8;
-    border: 3px solid #222;
+    background: #0f0e17;
+    color: #ffffff;
+    border: 3px solid rgba(255, 255, 255, 0.4);
     outline: none;
     font-size: 16px;
-    font-family: Inter, sans-serif;
-    transition: .2s;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
     resize: none;
+    border-radius: 8px;
 }
 
-.field textarea {
-    min-height: 170px;
+.field input::placeholder,
+.field textarea::placeholder {
+    color: rgba(255, 255, 255, 0.4);
 }
 
 .field input:focus,
 .field textarea:focus {
-    border-color: #4F3598;
+    border-color: #EEFF4E;
+    box-shadow: 0 0 0 2px #EEFF4E;
 }
 
 
-/* ===========================
-   BUTTON
-=========================== */
+/* Submit Button */
 
 .submit-btn {
     width: 100%;
-    padding: 22px;
-    background: #4F3598;
-    color: white;
-    border: 3px solid #222;
+    padding: 20px;
+    background: #df5dbc;
+    color: #ffffff;
+    border: 3px solid #000;
     cursor: pointer;
     font-family: "Anton", sans-serif;
-    font-size: 42px;
+    font-size: 32px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    box-shadow: 7px 7px 0 #222;
-    transition: .18s;
+    box-shadow: 6px 6px 0 #EEFF4E;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    border-radius: 8px;
+
 }
 
 .submit-btn:hover {
-    transform: translate(-4px, -4px);
-    box-shadow: 11px 11px 0 #222;
+    transform: translate(-3px, -3px);
+    box-shadow: 9px 9px 0 #EEFF4E;
 }
 
 
-/* ===========================
-   SUCCESS
-=========================== */
+/* Success Box */
 
 .success-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 520px;
+    min-height: 420px;
     text-align: center;
 }
 
 .success-box h3 {
     font-family: "Anton", sans-serif;
-    font-size: 64px;
+    font-size: 54px;
     margin-bottom: 15px;
-    color: #17151C;
+    color: #EEFF4E;
 }
 
 .success-box p {
     font-size: 20px;
     font-weight: 600;
-    color: #444;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 
-/* ===========================
-   TABLET
-=========================== */
+/* Responsive Layout */
 
-@media (max-width:1100px) {
+@media (max-width: 1100px) {
     .partner-container {
         grid-template-columns: 1fr;
-        gap: 70px;
+        gap: 60px;
     }
     .partner-left {
         align-items: center;
         text-align: center;
     }
-    .partner-description {
-        max-width: 700px;
-    }
-    .partner-image {
-        max-width: 600px;
+    .partner-contact-cards {
+        justify-content: center;
     }
     .partner-card {
         width: 100%;
     }
 }
 
-
-/* ===========================
-   MOBILE
-=========================== */
-
-@media (max-width:768px) {
+@media (max-width: 768px) {
     .partner-section {
-        padding: 70px 22px;
-    }
-    .partner-container {
-        gap: 60px;
+        padding: 70px 20px;
     }
     .partner-heading {
-        font-size: 4.5rem;
+        font-size: 4rem;
     }
     .partner-description {
-        font-size: 18px;
-        margin-bottom: 35px;
-    }
-    .partner-image {
-        box-shadow: 6px 6px 0 #222;
-    }
-    .partner-card {
-        padding: 28px;
-        box-shadow: 6px 6px 0 #222;
+        font-size: 17px;
     }
     .row {
         grid-template-columns: 1fr;
     }
     .submit-btn {
-        font-size: 26px;
-        padding: 18px;
+        font-size: 24px;
+        padding: 16px;
     }
-    .partner-tag {
-        left: 14px;
-        top: -18px;
-        font-size: 12px;
-    }
-    .success-box h3 {
-        font-size: 42px;
+    .partner-card {
+        padding: 28px 20px;
     }
 }
