@@ -20,10 +20,10 @@ export default function Footer({ routes }) {
             and experiences that define what it means to be young and creative
             in this city.
             <br />
-          </p><a>Say Hi!</a>
+          </p>
           <br />
-          <a className="ft-email" href="mailto:hello@moramba.in">
-            hello@moramba.in
+          <a className="ft-email" href="mailto:hoh.commune@gmail.com">
+            hoh.commune@gmail.com
           </a>
         </div>
 

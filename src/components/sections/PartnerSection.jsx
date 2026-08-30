@@ -35,7 +35,7 @@ export default function PartnerSection() {
                 </h2>
                 <p className="partner-subtext">
                   Whether you're launching a brand, hosting an event, building a community,
-                  or creating something exciting — we'd love to chat.
+                  or creating something exciting  we'd love to chat.
                 </p>
               </div>
 
@@ -46,7 +46,7 @@ export default function PartnerSection() {
                   hoh.commune@gmail.com
                 </a>
                 <div className="partner-social-tag">
-                  Instagram: <a href="https://www.instagram.com/hoh.commune/" target="_blank" rel="noreferrer">@hoh.commune</a>
+
                 </div>
               </div>
             </div>

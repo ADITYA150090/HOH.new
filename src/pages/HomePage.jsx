@@ -17,14 +17,13 @@ export default function HomePage() {
     <main>
       <Loader />
       <Hero id="home" />
-      <Ticker items={cultureItems} />
+      {/* <Ticker items={cultureItems} /> */}
       <IntroSection />
       <StatsSection />
       <Ticker items={cultureItems} reverse />
       <WorkSection compact />
       <ImageTicker />
       <WorkSectionTwo compact />
-
       <OurStory />
       <CardStack />
       <PartnerSection />
