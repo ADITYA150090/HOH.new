@@ -43,7 +43,7 @@ export default function PartnerSection() {
               <div className="partner-direct-contact">
                 <div className="say-hi-label">Say hi!</div>
                 <a href="mailto:hello@moramba.in" className="partner-email-link">
-                  hello@moramba.in
+                  hoh.commune@gmail.com
                 </a>
                 <div className="partner-social-tag">
                   Instagram: <a href="https://www.instagram.com/hoh.commune/" target="_blank" rel="noreferrer">@hoh.commune</a>
@@ -55,7 +55,7 @@ export default function PartnerSection() {
             <div className="partner-form-col">
               {submitted ? (
                 <div className="partner-success-box">
-                  <h3>MESSAGE SENT! ✨</h3>
+                  <h3>MESSAGE SENT! </h3>
                   <p>We'll get back to you within 24 hours.</p>
                   <button
                     className="partner-reset-btn"
@@ -112,7 +112,7 @@ export default function PartnerSection() {
 
                   <button className="partner-submit-btn" type="submit">
                     <span>LET'S TALK</span>
-                    <span className="sparkle-icon">✨</span>
+                    <span className="sparkle-icon"></span>
                   </button>
                 </form>
               )}
