@@ -1,5 +1,5 @@
 /* ============================================================
-   MEET OVER COFFEE - PARTNER SECTION (FULL VIEWPORT 100VH x 100VW)
+   MEET OVER COFFEE - PARTNER SECTION (LARGE FULL VIEWPORT 100VH x 100VW)
 ============================================================ */
 
 .partner-section {
@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px 5%;
+    padding: 30px 4%;
     font-family: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
     position: relative;
     box-sizing: border-box;
@@ -19,9 +19,9 @@
 }
 
 .partner-max-w {
-    max-width: 1200px;
+    max-width: 1440px;
     margin: 0 auto;
-    width: 100%;
+    width: 94%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,23 +31,23 @@
 .partner-card {
     background: #FFFFFF;
     border: 1px solid #EBE6DC;
-    border-radius: 28px;
-    padding: 48px 52px;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.035), 0 2px 6px rgba(0, 0, 0, 0.02);
+    border-radius: 36px;
+    padding: 64px 72px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.02);
     transition: box-shadow 0.3s ease;
     width: 100%;
     box-sizing: border-box;
 }
 
 .partner-card:hover {
-    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.05), 0 4px 12px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 28px 60px rgba(0, 0, 0, 0.06), 0 6px 16px rgba(0, 0, 0, 0.03);
 }
 
 /* Horizontal Card Grid */
 .partner-card-grid {
     display: grid;
-    grid-template-columns: 1fr 1.15fr;
-    gap: 50px;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 70px;
     align-items: center;
 }
 
@@ -61,43 +61,43 @@
 
 .partner-main-heading {
     font-family: "Anton", "Bebas Neue", "Inter", sans-serif;
-    font-size: clamp(2.8rem, 4.8vw, 4.2rem);
-    line-height: 0.96;
+    font-size: clamp(3.6rem, 5.8vw, 5.6rem);
+    line-height: 0.92;
     color: #111111;
     letter-spacing: -0.01em;
     text-transform: uppercase;
-    margin-bottom: 16px;
+    margin-bottom: 22px;
     font-weight: 900;
 }
 
 .partner-subtext {
-    font-size: 15px;
-    line-height: 1.55;
+    font-size: 18px;
+    line-height: 1.6;
     color: #555555;
-    margin-bottom: 32px;
-    max-width: 440px;
+    margin-bottom: 40px;
+    max-width: 500px;
 }
 
 /* Direct Contact / Say Hi */
 .partner-direct-contact {
     margin-top: auto;
-    padding-top: 24px;
+    padding-top: 32px;
     border-top: 1px solid #EBE6DC;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
 }
 
 .say-hi-label {
     font-family: "Anton", "Inter", sans-serif;
-    font-size: 22px;
+    font-size: 28px;
     font-weight: 700;
     color: #111111;
     letter-spacing: 0.02em;
 }
 
 .partner-email-link {
-    font-size: 16px;
+    font-size: 20px;
     color: #C5221F;
     font-weight: 700;
     text-decoration: underline;
@@ -112,7 +112,7 @@
 }
 
 .partner-social-tag {
-    font-size: 14px;
+    font-size: 16px;
     color: #666666;
     margin-top: 4px;
 }
@@ -136,25 +136,25 @@
 .partner-form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 24px;
 }
 
 /* Desktop Horizontal Form Fields Row (NAME & EMAIL side-by-side) */
 .form-fields-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
+    gap: 20px;
 }
 
 .form-field {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
 }
 
 .form-field label {
     font-family: "Inter", "Plus Jakarta Sans", sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 800;
     color: #111111;
     letter-spacing: 0.07em;
@@ -167,9 +167,9 @@
     background: #FAFAFA;
     color: #111111;
     border: 1.5px solid #E5E0D7;
-    border-radius: 14px;
-    padding: 14px 18px;
-    font-size: 15px;
+    border-radius: 16px;
+    padding: 18px 24px;
+    font-size: 17px;
     font-family: "Plus Jakarta Sans", "Inter", sans-serif;
     outline: none;
     transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
@@ -202,28 +202,28 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 12px;
     align-self: flex-start;
     background: #1C1C1E;
     color: #FFFFFF;
     border: none;
-    border-radius: 16px;
-    padding: 16px 36px;
+    border-radius: 18px;
+    padding: 20px 48px;
     font-family: "Anton", "Inter", sans-serif;
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 700;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     cursor: pointer;
     transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    margin-top: 4px;
+    margin-top: 8px;
     -webkit-tap-highlight-color: transparent;
 }
 
 .partner-submit-btn:hover {
     background: #000000;
     transform: translateY(-2px);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
 }
 
 .partner-submit-btn:active {
@@ -232,7 +232,7 @@
 }
 
 .sparkle-icon {
-    font-size: 18px;
+    font-size: 22px;
     display: inline-block;
     transition: transform 0.3s ease;
 }
@@ -243,31 +243,31 @@
 
 /* Success Box */
 .partner-success-box {
-    padding: 40px 20px;
+    padding: 50px 20px;
     text-align: center;
 }
 
 .partner-success-box h3 {
     font-family: "Anton", sans-serif;
-    font-size: 36px;
+    font-size: 42px;
     color: #111111;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 }
 
 .partner-success-box p {
-    font-size: 17px;
+    font-size: 19px;
     color: #555555;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
 }
 
 .partner-reset-btn {
     background: transparent;
     border: 1.5px solid #111111;
     color: #111111;
-    padding: 10px 20px;
-    border-radius: 10px;
+    padding: 12px 28px;
+    border-radius: 12px;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 15px;
     cursor: pointer;
     transition: background 0.2s ease, color 0.2s ease;
 }
@@ -281,10 +281,19 @@
    RESPONSIVE BREAKPOINTS (TABLET & MOBILE STACKING)
 ============================================================ */
 
+@media (max-width: 1200px) {
+    .partner-card {
+        padding: 48px 44px;
+    }
+    .partner-main-heading {
+        font-size: clamp(3rem, 5vw, 4.4rem);
+    }
+}
+
 @media (max-width: 991px) {
     .partner-section {
         min-height: 100vh;
-        padding: 50px 20px;
+        padding: 40px 20px;
     }
 
     .partner-card-grid {
@@ -305,7 +314,11 @@
 @media (max-width: 768px) {
     .partner-section {
         min-height: 100vh;
-        padding: 40px 16px;
+        padding: 30px 16px;
+    }
+
+    .partner-max-w {
+        width: 100%;
     }
 
     .partner-card {
@@ -316,6 +329,10 @@
     .partner-main-heading {
         font-size: clamp(2.2rem, 9vw, 3rem);
         margin-bottom: 14px;
+    }
+
+    .partner-subtext {
+        font-size: 15px;
     }
 
     .form-fields-row {
@@ -332,12 +349,14 @@
     .partner-submit-btn {
         width: 100%;
         justify-content: center;
+        padding: 16px 24px;
+        font-size: 17px;
     }
 }
 
 @media (max-width: 380px) {
     .partner-section {
-        padding: 30px 12px;
+        padding: 20px 12px;
     }
 
     .partner-card {
