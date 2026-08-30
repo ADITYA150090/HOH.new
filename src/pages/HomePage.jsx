@@ -27,7 +27,7 @@ export default function HomePage() {
 
       <OurStory />
       <CardStack />
-      {/* <PartnerSection /> */}
+      <PartnerSection />
     </main>
   );
 }

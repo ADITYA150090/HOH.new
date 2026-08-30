@@ -1,10 +1,18 @@
 import { useState } from "react";
 import "./PartnerSection.css";
 
-import Letter from "../../assets/Texture/Letter.png";
-
 export default function PartnerSection() {
   const [submitted, setSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    brief: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -13,100 +21,93 @@ export default function PartnerSection() {
 
   return (
     <section className="partner-section" id="partner">
-      <div className="partner-container">
+      <div className="partner-max-w">
+        {/* TOP HEADER BAR */}
+        <div className="partner-header-bar">
+          <span className="partner-header-num">07</span>
+          <span className="partner-header-title">CONTACT US</span>
+        </div>
+        <div className="partner-header-line" />
 
-        {/* LEFT */}
-        <div className="partner-left">
-          <div className="partner-badge">DIRECT LINE</div>
-
-          <h2 className="partner-heading">
-            JOIN THE
-            <br />
-            <span>CHAOS.</span>
+        {/* FORM CARD CONTAINER */}
+        <div className="partner-card">
+          <h2 className="partner-main-heading">
+            MEET OVER<br />COFFEE?
           </h2>
 
-          <p className="partner-description">
-            Whether you're launching a brand, hosting an event,
-            building a community, or creating something exciting,
-            we'll help you connect with thousands of students and
-            young professionals. Let's talk about your idea.
-          </p>
-
-          <div className="partner-contact-cards">
-            <a href="mailto:hello@moramba.in" className="contact-card">
-              <span className="contact-label">EMAIL</span>
-              <span className="contact-value">hello@moramba.in</span>
-            </a>
-
-            <a href="https://www.instagram.com/hoh.commune/" target="_blank" rel="noreferrer" className="contact-card">
-              <span className="contact-label">INSTAGRAM</span>
-              <span className="contact-value commune-tag">@hoh.commune</span>
-            </a>
-          </div>
-
-          <div className="partner-image">
-            <img src={Letter} alt="HOH Letter Graphic" />
-          </div>
-        </div>
-
-        {/* RIGHT */}
-        <div className="partner-card">
-          <div className="partner-tag">
-            LET'S TALK
-          </div>
-
           {submitted ? (
-            <div className="success-box">
-              <h3>MESSAGE SENT!</h3>
-              <p>
-                We'll get back to you within 24 hours.
-              </p>
+            <div className="partner-success-box">
+              <h3>MESSAGE SENT! ✨</h3>
+              <p>We'll get back to you within 24 hours.</p>
+              <button 
+                className="partner-reset-btn"
+                onClick={() => {
+                  setSubmitted(false);
+                  setFormData({ name: "", email: "", brief: "" });
+                }}
+              >
+                Send another message
+              </button>
             </div>
           ) : (
             <form className="partner-form" onSubmit={handleSubmit}>
-              <div className="row">
-                <div className="field">
-                  <label>YOUR NAME</label>
-                  <input
-                    type="text"
-                    placeholder="Rohan Sharma"
-                    required
-                  />
-                </div>
-
-                <div className="field">
-                  <label>BRAND / ORG</label>
-                  <input
-                    type="text"
-                    placeholder="Your Brand"
-                  />
-                </div>
-              </div>
-
-              <div className="field">
-                <label>EMAIL ADDRESS</label>
+              <div className="form-field">
+                <label htmlFor="partner-name">NAME</label>
                 <input
-                  type="email"
-                  placeholder="you@brand.com"
+                  id="partner-name"
+                  name="name"
+                  type="text"
+                  placeholder="Your name, please. We promise not to misspell"
+                  value={formData.name}
+                  onChange={handleChange}
                   required
                 />
               </div>
 
-              <div className="field">
-                <label>WHAT'S THE PLAN?</label>
-                <textarea
-                  rows={5}
-                  placeholder="Tell us about your project or event..."
+              <div className="form-field">
+                <label htmlFor="partner-email">EMAIL ID</label>
+                <input
+                  id="partner-email"
+                  name="email"
+                  type="email"
+                  placeholder="Drop your email for virtual high-fives"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
                 />
               </div>
 
-              <button className="submit-btn" type="submit">
-                LET'S BUILD SOMETHING
+              <div className="form-field">
+                <label htmlFor="partner-brief">BRIEF</label>
+                <textarea
+                  id="partner-brief"
+                  name="brief"
+                  rows={4}
+                  placeholder="Tell us everything! Well, almost everything."
+                  value={formData.brief}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+
+              <button className="partner-submit-btn" type="submit">
+                <span>LET'S TALK</span>
+                <span className="sparkle-icon">✨</span>
               </button>
             </form>
           )}
-        </div>
 
+          {/* CONTACT INFO / SAY HI SECTION ABOVE EMAIL */}
+          <div className="partner-direct-contact">
+            <div className="say-hi-label">Say hi!</div>
+            <a href="mailto:hello@moramba.in" className="partner-email-link">
+              hello@moramba.in
+            </a>
+            <div className="partner-social-tag">
+              Instagram: <a href="https://www.instagram.com/hoh.commune/" target="_blank" rel="noreferrer">@hoh.commune</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
