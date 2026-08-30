@@ -1,5 +1,5 @@
 /* ============================================================
-   MEET OVER COFFEE - PARTNER SECTION (DESKTOP & MOBILE OPTIMIZED)
+   MEET OVER COFFEE - PARTNER SECTION (HORIZONTAL DESKTOP LAYOUT)
 ============================================================ */
 
 .partner-section {
@@ -13,14 +13,12 @@
 }
 
 .partner-max-w {
-    max-width: 760px;
+    max-width: 1140px;
     margin: 0 auto;
     width: 100%;
 }
 
-/* ------------------------------------------------------------
-   Header Bar (07 | CONTACT US)
------------------------------------------------------------- */
+/* Header Bar (07 | CONTACT US) */
 .partner-header-bar {
     display: flex;
     justify-content: space-between;
@@ -53,149 +51,63 @@
     opacity: 0.9;
 }
 
-/* ------------------------------------------------------------
-   Form Card Container
------------------------------------------------------------- */
+/* Card Container */
 .partner-card {
     background: #FFFFFF;
     border: 1px solid #EBE6DC;
     border-radius: 28px;
     padding: 56px 52px;
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.035), 0 2px 6px rgba(0, 0, 0, 0.02);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease;
 }
 
 .partner-card:hover {
     box-shadow: 0 20px 48px rgba(0, 0, 0, 0.05), 0 4px 12px rgba(0, 0, 0, 0.03);
 }
 
+/* Horizontal Card Grid */
+.partner-card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 60px;
+    align-items: start;
+}
+
+/* Left Info Column */
+.partner-info-col {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
 .partner-main-heading {
     font-family: "Anton", "Bebas Neue", "Inter", sans-serif;
-    font-size: clamp(3rem, 6.5vw, 4.6rem);
+    font-size: clamp(3rem, 5vw, 4.4rem);
     line-height: 0.96;
     color: #111111;
     letter-spacing: -0.01em;
     text-transform: uppercase;
-    margin-bottom: 44px;
+    margin-bottom: 20px;
     font-weight: 900;
 }
 
-/* ------------------------------------------------------------
-   Form & Input Fields
------------------------------------------------------------- */
-.partner-form {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+.partner-subtext {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555555;
+    margin-bottom: 40px;
+    max-width: 440px;
 }
 
-.form-field {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.form-field label {
-    font-family: "Inter", "Plus Jakarta Sans", sans-serif;
-    font-size: 13px;
-    font-weight: 800;
-    color: #111111;
-    letter-spacing: 0.07em;
-    text-transform: uppercase;
-}
-
-.form-field input,
-.form-field textarea {
-    width: 100%;
-    background: #FAFAFA;
-    color: #111111;
-    border: 1.5px solid #E5E0D7;
-    border-radius: 14px;
-    padding: 18px 22px;
-    font-size: 15px;
-    font-family: "Plus Jakarta Sans", "Inter", sans-serif;
-    outline: none;
-    transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
-    resize: vertical;
-    box-sizing: border-box;
-}
-
-.form-field input::placeholder,
-.form-field textarea::placeholder {
-    color: #A09B93;
-    font-weight: 400;
-    opacity: 0.9;
-}
-
-.form-field input:hover,
-.form-field textarea:hover {
-    border-color: #C8C2B7;
-    background: #FFFFFF;
-}
-
-.form-field input:focus,
-.form-field textarea:focus {
-    background: #FFFFFF;
-    border-color: #111111;
-    box-shadow: 0 0 0 4px rgba(17, 17, 17, 0.07);
-}
-
-/* ------------------------------------------------------------
-   Submit Button
------------------------------------------------------------- */
-.partner-submit-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    align-self: flex-start;
-    background: #1C1C1E;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 16px;
-    padding: 18px 36px;
-    font-family: "Anton", "Inter", sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    margin-top: 10px;
-    -webkit-tap-highlight-color: transparent;
-}
-
-.partner-submit-btn:hover {
-    background: #000000;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
-}
-
-.partner-submit-btn:active {
-    transform: translateY(0);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.sparkle-icon {
-    font-size: 18px;
-    display: inline-block;
-    transition: transform 0.3s ease;
-}
-
-.partner-submit-btn:hover .sparkle-icon {
-    transform: rotate(15deg) scale(1.15);
-}
-
-/* ------------------------------------------------------------
-   Direct Contact / Say Hi Section
------------------------------------------------------------- */
+/* Direct Contact / Say Hi */
 .partner-direct-contact {
-    margin-top: 52px;
-    padding-top: 36px;
+    margin-top: auto;
+    padding-top: 28px;
     border-top: 1px solid #EBE6DC;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
 }
 
 .say-hi-label {
@@ -238,33 +150,143 @@
     color: #C5221F;
 }
 
-/* ------------------------------------------------------------
-   Success Box
------------------------------------------------------------- */
+/* Right Form Column */
+.partner-form-col {
+    width: 100%;
+}
+
+.partner-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Desktop Horizontal Form Fields Row (NAME & EMAIL side-by-side) */
+.form-fields-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-field label {
+    font-family: "Inter", "Plus Jakarta Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    color: #111111;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    background: #FAFAFA;
+    color: #111111;
+    border: 1.5px solid #E5E0D7;
+    border-radius: 14px;
+    padding: 16px 20px;
+    font-size: 15px;
+    font-family: "Plus Jakarta Sans", "Inter", sans-serif;
+    outline: none;
+    transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+    color: #A09B93;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.form-field input:hover,
+.form-field textarea:hover {
+    border-color: #C8C2B7;
+    background: #FFFFFF;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    background: #FFFFFF;
+    border-color: #111111;
+    box-shadow: 0 0 0 4px rgba(17, 17, 17, 0.07);
+}
+
+/* Submit Button */
+.partner-submit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    align-self: flex-start;
+    background: #1C1C1E;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 16px;
+    padding: 16px 36px;
+    font-family: "Anton", "Inter", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 6px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.partner-submit-btn:hover {
+    background: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+}
+
+.partner-submit-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.sparkle-icon {
+    font-size: 18px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.partner-submit-btn:hover .sparkle-icon {
+    transform: rotate(15deg) scale(1.15);
+}
+
+/* Success Box */
 .partner-success-box {
-    padding: 48px 20px;
+    padding: 40px 20px;
     text-align: center;
 }
 
 .partner-success-box h3 {
     font-family: "Anton", sans-serif;
-    font-size: 40px;
+    font-size: 36px;
     color: #111111;
-    margin-bottom: 14px;
-    letter-spacing: 0.02em;
+    margin-bottom: 12px;
 }
 
 .partner-success-box p {
-    font-size: 18px;
+    font-size: 17px;
     color: #555555;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
 }
 
 .partner-reset-btn {
     background: transparent;
     border: 1.5px solid #111111;
     color: #111111;
-    padding: 12px 24px;
+    padding: 10px 20px;
     border-radius: 10px;
     font-weight: 700;
     font-size: 14px;
@@ -278,109 +300,57 @@
 }
 
 /* ============================================================
-   RESPONSIVE BREAKPOINTS (DESKTOP, TABLET & MOBILE)
+   RESPONSIVE BREAKPOINTS (TABLET & MOBILE STACKING)
 ============================================================ */
 
-/* Large Desktop (Above 1200px) */
-@media (min-width: 1200px) {
-    .partner-section {
-        padding: 100px 8% 140px;
-    }
-    
-    .partner-max-w {
-        max-width: 800px;
+@media (max-width: 991px) {
+    .partner-card-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
 
     .partner-card {
-        padding: 60px 56px;
+        padding: 40px 32px;
+        border-radius: 24px;
+    }
+
+    .partner-direct-contact {
+        margin-top: 36px;
     }
 }
 
-/* Tablet (769px to 1024px) */
-@media (max-width: 1024px) and (min-width: 769px) {
-    .partner-section {
-        padding: 70px 5% 90px;
-    }
-
-    .partner-card {
-        padding: 44px 38px;
-        border-radius: 22px;
-    }
-}
-
-/* Mobile Devices (768px and below) */
 @media (max-width: 768px) {
     .partner-section {
         padding: 40px 16px 60px;
     }
 
-    .partner-header-bar {
-        font-size: 14px;
-        padding-bottom: 8px;
-    }
-
-    .partner-header-num {
-        font-size: 16px;
-    }
-
-    .partner-header-line {
-        margin-bottom: 28px;
-    }
-
     .partner-card {
-        padding: 30px 20px;
+        padding: 28px 20px;
         border-radius: 20px;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
     }
 
     .partner-main-heading {
         font-size: clamp(2.2rem, 9vw, 3rem);
-        margin-bottom: 28px;
+        margin-bottom: 16px;
     }
 
-    .partner-form {
+    .form-fields-row {
+        grid-template-columns: 1fr;
         gap: 22px;
-    }
-
-    .form-field {
-        gap: 8px;
-    }
-
-    .form-field label {
-        font-size: 12px;
     }
 
     .form-field input,
     .form-field textarea {
-        font-size: 16px; /* 16px prevents iOS browser auto-zoom on input focus */
+        font-size: 16px; /* Prevents auto-zoom on mobile safari */
         padding: 14px 16px;
-        border-radius: 12px;
     }
 
     .partner-submit-btn {
         width: 100%;
         justify-content: center;
-        padding: 16px 20px;
-        font-size: 16px;
-        border-radius: 14px;
-        margin-top: 4px;
-    }
-
-    .partner-direct-contact {
-        margin-top: 36px;
-        padding-top: 24px;
-    }
-
-    .say-hi-label {
-        font-size: 20px;
-    }
-
-    .partner-email-link {
-        font-size: 15px;
     }
 }
 
-/* Extra Small Mobile Screens (380px and below) */
 @media (max-width: 380px) {
     .partner-section {
         padding: 30px 12px 50px;
