@@ -1,54 +1,30 @@
 /* ============================================================
-   MEET OVER COFFEE - PARTNER SECTION (HORIZONTAL DESKTOP LAYOUT)
+   MEET OVER COFFEE - PARTNER SECTION (FULL VIEWPORT 100VH x 100VW)
 ============================================================ */
 
 .partner-section {
     background: #FAF7F2;
     color: #111111;
-    padding: 90px 6% 120px;
+    min-height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 5%;
     font-family: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
     position: relative;
-    width: 100%;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .partner-max-w {
-    max-width: 1140px;
+    max-width: 1200px;
     margin: 0 auto;
     width: 100%;
-}
-
-/* Header Bar (07 | CONTACT US) */
-.partner-header-bar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #C5221F;
-    font-family: "Inter", "Plus Jakarta Sans", sans-serif;
-    font-size: 16px;
-    font-weight: 800;
-    letter-spacing: 0.1em;
-    padding-bottom: 12px;
-    user-select: none;
-}
-
-.partner-header-num {
-    font-size: 18px;
-    font-weight: 900;
-    font-feature-settings: "tnum";
-}
-
-.partner-header-title {
-    text-transform: uppercase;
-    font-size: 15px;
-}
-
-.partner-header-line {
-    width: 100%;
-    height: 1.5px;
-    background-color: #C5221F;
-    margin-bottom: 48px;
-    opacity: 0.9;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* Card Container */
@@ -56,9 +32,11 @@
     background: #FFFFFF;
     border: 1px solid #EBE6DC;
     border-radius: 28px;
-    padding: 56px 52px;
+    padding: 48px 52px;
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.035), 0 2px 6px rgba(0, 0, 0, 0.02);
     transition: box-shadow 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .partner-card:hover {
@@ -69,8 +47,8 @@
 .partner-card-grid {
     display: grid;
     grid-template-columns: 1fr 1.15fr;
-    gap: 60px;
-    align-items: start;
+    gap: 50px;
+    align-items: center;
 }
 
 /* Left Info Column */
@@ -83,27 +61,27 @@
 
 .partner-main-heading {
     font-family: "Anton", "Bebas Neue", "Inter", sans-serif;
-    font-size: clamp(3rem, 5vw, 4.4rem);
+    font-size: clamp(2.8rem, 4.8vw, 4.2rem);
     line-height: 0.96;
     color: #111111;
     letter-spacing: -0.01em;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     font-weight: 900;
 }
 
 .partner-subtext {
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 15px;
+    line-height: 1.55;
     color: #555555;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
     max-width: 440px;
 }
 
 /* Direct Contact / Say Hi */
 .partner-direct-contact {
     margin-top: auto;
-    padding-top: 28px;
+    padding-top: 24px;
     border-top: 1px solid #EBE6DC;
     display: flex;
     flex-direction: column;
@@ -112,14 +90,14 @@
 
 .say-hi-label {
     font-family: "Anton", "Inter", sans-serif;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 700;
     color: #111111;
     letter-spacing: 0.02em;
 }
 
 .partner-email-link {
-    font-size: 17px;
+    font-size: 16px;
     color: #C5221F;
     font-weight: 700;
     text-decoration: underline;
@@ -158,25 +136,25 @@
 .partner-form {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 20px;
 }
 
 /* Desktop Horizontal Form Fields Row (NAME & EMAIL side-by-side) */
 .form-fields-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 16px;
 }
 
 .form-field {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
 }
 
 .form-field label {
     font-family: "Inter", "Plus Jakarta Sans", sans-serif;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 800;
     color: #111111;
     letter-spacing: 0.07em;
@@ -190,7 +168,7 @@
     color: #111111;
     border: 1.5px solid #E5E0D7;
     border-radius: 14px;
-    padding: 16px 20px;
+    padding: 14px 18px;
     font-size: 15px;
     font-family: "Plus Jakarta Sans", "Inter", sans-serif;
     outline: none;
@@ -238,7 +216,7 @@
     text-transform: uppercase;
     cursor: pointer;
     transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    margin-top: 6px;
+    margin-top: 4px;
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -304,24 +282,30 @@
 ============================================================ */
 
 @media (max-width: 991px) {
+    .partner-section {
+        min-height: 100vh;
+        padding: 50px 20px;
+    }
+
     .partner-card-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 36px;
     }
 
     .partner-card {
-        padding: 40px 32px;
+        padding: 36px 28px;
         border-radius: 24px;
     }
 
     .partner-direct-contact {
-        margin-top: 36px;
+        margin-top: 28px;
     }
 }
 
 @media (max-width: 768px) {
     .partner-section {
-        padding: 40px 16px 60px;
+        min-height: 100vh;
+        padding: 40px 16px;
     }
 
     .partner-card {
@@ -331,12 +315,12 @@
 
     .partner-main-heading {
         font-size: clamp(2.2rem, 9vw, 3rem);
-        margin-bottom: 16px;
+        margin-bottom: 14px;
     }
 
     .form-fields-row {
         grid-template-columns: 1fr;
-        gap: 22px;
+        gap: 18px;
     }
 
     .form-field input,
@@ -353,7 +337,7 @@
 
 @media (max-width: 380px) {
     .partner-section {
-        padding: 30px 12px 50px;
+        padding: 30px 12px;
     }
 
     .partner-card {

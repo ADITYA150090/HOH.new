@@ -23,11 +23,6 @@ export default function PartnerSection() {
     <section className="partner-section" id="partner">
       <div className="partner-max-w">
         {/* TOP HEADER BAR */}
-        <div className="partner-header-bar">
-          <span className="partner-header-num">07</span>
-          <span className="partner-header-title">CONTACT US</span>
-        </div>
-        <div className="partner-header-line" />
 
         {/* FORM CARD CONTAINER */}
         <div className="partner-card">
@@ -62,7 +57,7 @@ export default function PartnerSection() {
                 <div className="partner-success-box">
                   <h3>MESSAGE SENT! ✨</h3>
                   <p>We'll get back to you within 24 hours.</p>
-                  <button 
+                  <button
                     className="partner-reset-btn"
                     onClick={() => {
                       setSubmitted(false);
