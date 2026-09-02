@@ -1,9 +1,10 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import "./Story.css";
 
 export default function OurStory() {
   const cardsRef = useRef([]);
+  const [isStoryOpen, setIsStoryOpen] = useState(false);
   cardsRef.current = [];
 
   const addCardRef = (el) => {
@@ -124,6 +125,123 @@ export default function OurStory() {
       </div> */}
   
     </div>
+    {/* KNOW OUR STORY BUTTON */}
+<div className="know-story-wrapper">
+  <button
+    className="know-story-btn"
+    onClick={() => setIsStoryOpen(true)}
+  >
+    Know Our Story
+    <span>↗</span>
+  </button>
+</div>
+
+{/* STORY MODAL */}
+{isStoryOpen && (
+  <div
+    className="story-modal-overlay"
+    onClick={() => setIsStoryOpen(false)}
+  >
+    <div
+      className="story-paper"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <button
+        className="story-close"
+        onClick={() => setIsStoryOpen(false)}
+      >
+        ×
+      </button>
+
+      <div className="paper-content">
+        <p className="paper-label">HOUSE OF HEARTS — OUR STORY</p>
+
+        <h1>
+          It started with
+          <br />
+          a gap.
+        </h1>
+
+        <p>
+          Nagpur was changing.
+        </p>
+
+        <p>
+          Cafes were opening. Coffee culture was arriving. Young people were
+          creating, building, experimenting and going out.
+        </p>
+
+        <p>
+          But something was missing.
+        </p>
+
+        <p>
+          Nobody was really speaking their language.
+        </p>
+
+        <p>
+          There was no culturally driven, digitally native creative community
+          representing the city's youth. So instead of waiting for one to
+          appear, we decided to build it ourselves.
+        </p>
+
+        <p>
+          <strong>House of Hearts launched on December 27, 2023.</strong>
+        </p>
+
+        <p>
+          No big funding. No perfect plan. No playbook.
+        </p>
+
+        <p>
+          Just two founders, a small team, an Instagram post and a belief that
+          Nagpur's youth deserved something that actually felt like them.
+        </p>
+
+        <p>
+          We started with content. Carousels. Stories. Collaborations with
+          local designers and writers.
+        </p>
+
+        <p>
+          Slowly, people started noticing.
+        </p>
+
+        <p>
+          Then they started sharing.
+        </p>
+
+        <p>
+          Then they started showing up.
+        </p>
+
+        <p>
+          Two months in, we had an audience.
+          <br />
+          Three months in, we had our first event.
+        </p>
+
+        <p>
+          And somewhere along the way, this stopped being just a content page.
+        </p>
+
+        <p>
+          It became a community.
+        </p>
+
+        <p className="paper-ending">
+          Nagpur isn't a Tier-2 footnote.
+          <br />
+          <strong>It's the origin story.</strong>
+        </p>
+
+        <p className="paper-signature">
+          — House of Hearts
+        </p>
+      </div>
+    </div>
+  </div>
+)}
   </section>
   );
 }

@@ -75,14 +75,15 @@ button {
     background: none;
 }
 
-#pb {
+
+/* #pb {
     position: fixed;
     inset: 0 auto auto 0;
     height: 2px;
     background: var(--pink);
     z-index: 9999;
     box-shadow: 0 0 16px var(--pink-glow);
-}
+} */
 
 #loader {
     position: fixed;

@@ -96,13 +96,17 @@ export default function Footer({ routes }) {
       </div>
 
       <div className="ft-bottom max-w">
-        <div>
-          © {new Date().getFullYear()} House of Hearts / Moramba Media.
-          All rights reserved.
-        </div>
+  <div>
+    © {new Date().getFullYear()} House of Hearts / Moramba Media.
+    All rights reserved.
+  </div>
 
-        <div>Built in Nagpur. Made with intent.</div>
-      </div>
+  <div className="ft-credit"
+  
+><a href="https://www.linkedin.com/in/aditya-dhawle-3932a124b/">Developed by Aditya </a></div>
+
+  <div>Built in Nagpur. Made with intent.</div>
+</div>
     </footer>
   );
 }

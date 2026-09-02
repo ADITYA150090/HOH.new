@@ -1,23 +1,23 @@
 import "./ImageTicker.css";
 
-import img1 from "../../../assets/Brands/1.svg";
-import img2 from "../../../assets/Brands/2.svg";
-import img3 from "../../../assets/Brands/3.svg";
-import img4 from "../../../assets/Brands/4.svg";
-import img5 from "../../../assets/Brands/5.svg";
-import img6 from "../../../assets/Brands/6.svg";
-import img7 from "../../../assets/Brands/7.svg";
-import img8 from "../../../assets/Brands/8.svg";
-import img9 from "../../../assets/Brands/9.svg";
-import img10 from "../../../assets/Brands/10.svg";
-import img11 from "../../../assets/Brands/11.svg";
-import img12 from "../../../assets/Brands/12.svg";
-import img13 from "../../../assets/Brands/13.svg";
-import img14 from "../../../assets/Brands/14.svg";
-import img15 from "../../../assets/Brands/15.svg";
-import img16 from "../../../assets/Brands/16.svg";
-import img17 from "../../../assets/Brands/17.svg";
-import img18 from "../../../assets/Brands/18.svg";
+import img1 from "../../../assets/Brands/png/1.png";
+import img2 from "../../../assets/Brands/png/2.png";
+import img3 from "../../../assets/Brands/png/3.png";
+import img4 from "../../../assets/Brands/png/4.png";
+import img5 from "../../../assets/Brands/png/5.png";
+import img6 from "../../../assets/Brands/png/6.png";
+import img7 from "../../../assets/Brands/png/7.png";
+import img8 from "../../../assets/Brands/png/8.png";
+import img9 from "../../../assets/Brands/png/9.png";
+import img10 from "../../../assets/Brands/png/10.png";
+import img11 from "../../../assets/Brands/png/11.png";
+import img12 from "../../../assets/Brands/png/12.png";
+import img13 from "../../../assets/Brands/png/13.png";
+import img14 from "../../../assets/Brands/png/14.png";
+import img15 from "../../../assets/Brands/png/15.png";
+import img16 from "../../../assets/Brands/png/16.png";
+import img17 from "../../../assets/Brands/png/17.png";
+import img18 from "../../../assets/Brands/png/18.png";
 
 const images = [
   img1,

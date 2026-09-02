@@ -80,31 +80,70 @@ const cardsData = [
 export default function CardStack() {
   const sectionRef = useRef(null);
 
+  // useEffect(() => {
+  //   const cardElements = gsap.utils.toArray(".stack-card");
+
+  //   cardElements.forEach((card, i) => {
+  //     gsap.set(card, {
+  //       rotate: gsap.utils.random(-6, 6),
+  //       zIndex: cardElements.length - i,
+  //     });
+  //   });
+
+  //   const tl = gsap.timeline({
+  //     scrollTrigger: {
+  //       trigger: sectionRef.current,
+  //       start: "top top",
+  //       end: `+=${cardElements.length * 800}`,
+  //       pin: true,
+  //       scrub: 1,
+  //     },
+  //   });
+
+  //   cardElements.forEach((card, i) => {
+  //     const isLast = i === cardElements.length - 1;
+  // if (isLast) return; // keep the last card pinned in place, don't animate it away
+  //     const dir = i % 2 === 0 ? -1 : 1;
+
+  //     tl.to(card, {
+  //       x: dir * 1600,
+  //       y: -150,
+  //       rotate: dir * 20,
+  //       opacity: 0,
+  //       duration: 1,
+  //     });
+  //   });
+
+  //   return () => ScrollTrigger.getAll().forEach((t) => t.kill());
+  // }, []);
   useEffect(() => {
     const cardElements = gsap.utils.toArray(".stack-card");
-
+  
     cardElements.forEach((card, i) => {
+      const isLast = i === cardElements.length - 1;
+  
       gsap.set(card, {
-        rotate: gsap.utils.random(-6, 6),
+        rotate: isLast ? 0 : gsap.utils.random(-6, 6),
         zIndex: cardElements.length - i,
       });
     });
-
+  
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
         start: "top top",
-        end: `+=${cardElements.length * 800}`,
+        end: `+=${(cardElements.length - 1) * 800}`,
         pin: true,
         scrub: 1,
       },
     });
-
+  
     cardElements.forEach((card, i) => {
       const isLast = i === cardElements.length - 1;
-  if (isLast) return; // keep the last card pinned in place, don't animate it away
+      if (isLast) return;
+  
       const dir = i % 2 === 0 ? -1 : 1;
-
+  
       tl.to(card, {
         x: dir * 1600,
         y: -150,
@@ -113,7 +152,7 @@ export default function CardStack() {
         duration: 1,
       });
     });
-
+  
     return () => ScrollTrigger.getAll().forEach((t) => t.kill());
   }, []);
 
