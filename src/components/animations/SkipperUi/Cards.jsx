@@ -8,6 +8,7 @@ import img2 from "../../../assets/review/2.png";
 import img3 from "../../../assets/review/3.png";
 import img4 from "../../../assets/review/4.png";
 import img5 from "../../../assets/review/5.png";
+import img6 from "../../../assets/review/6.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,9 +17,9 @@ const cardsData = [
     id: 1,
     bgColor: "#FF4B72",
     textColor: "#000000",
-    quote: "Best folks to partner with, always. Their community-centric approach and mindset are what make me come back for creative and conceptual experiential work.",
-    name: "Bhavik Mehta",
-    role: "Founder Matra, Thinkin'Bird Communications",
+    quote: "If you're a brand looking to build community through crazy experiences, House of Hearts is a team I'd happily recommend. I absolutely loved being a part of their event.",
+    name: "Simran Dhameja",
+    role: "CEO & Founder | Shark.en India ",
     stars: 5,
     avatar: img1,
   },
@@ -26,9 +27,9 @@ const cardsData = [
     id: 2,
     bgColor: "#2B95FF",
     textColor: "#ffffff",
-    quote: "House of Hearts turns a city event into a cultural moment people actually want to be part of. The energy and execution are unmatched.",
-    name: "Rohan Sharma",
-    role: "Partner Brand, Nagpur",
+    quote: "If you're a brand looking to build community through crazy experiences, House of Hearts is a team I'd happily recommend. I absolutely loved being a part of their event.",
+    name: "Simran Dhameja",
+    role: "CEO & Founder | Shark.en India ",
     stars: 5,
     avatar: img2,
   },
@@ -36,9 +37,9 @@ const cardsData = [
     id: 3,
     bgColor: "#FFD500",
     textColor: "#000000",
-    quote: "The audience is young, responsive, and real. That combination is rare in Nagpur. They bring real footfall every single time.",
-    name: "Ananya Deshmukh",
-    role: "Venue Partner, F&B",
+    quote: "If you're a brand looking to build community through crazy experiences, House of Hearts is a team I'd happily recommend. I absolutely loved being a part of their event..",
+    name: "Simran Dhameja",
+    role: "CEO & Founder | Shark.en India ",
     stars: 5,
     avatar: img3,
   },
@@ -56,12 +57,24 @@ const cardsData = [
     id: 5,
     bgColor: "#05C793",
     textColor: "#000000",
-    quote: "We build for the people who do not just like posts. They buy tickets, bring friends, make reels, and turn up.",
-    name: "House of Hearts",
-    role: "Nagpur Youth Culture Collective",
+    quote: "Best folks to partner with, always. Their community-centric approach and mindset are what make me come back for creative and conceptual experiential work.",
+    name: "Bhavik Mehta",
+    role: "Founder | Matra, Thinkin’Bird Communications",
     stars: 5,
     avatar: img5,
   },
+  {
+    id: 6,
+    bgColor: "#2B95FF",
+    textColor: "#ffffff",
+    quote: "More than an event partner, House of Hearts brings cultural insight, creative thinking, and flawless execution to every collaboration. A team we'd gladly work with again.",
+    name: "Azeem Khan",
+    role: "Founder | The Tie Up ",
+    stars: 5,
+    avatar: img6,
+  },
+  
+
 ];
 
 export default function CardStack() {
@@ -88,6 +101,8 @@ export default function CardStack() {
     });
 
     cardElements.forEach((card, i) => {
+      const isLast = i === cardElements.length - 1;
+  if (isLast) return; // keep the last card pinned in place, don't animate it away
       const dir = i % 2 === 0 ? -1 : 1;
 
       tl.to(card, {

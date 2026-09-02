@@ -59,7 +59,9 @@ export default function Services() {
             </div>
 
             <h2 className="services-h2">
-              One community.
+              {/* One community. */}
+              <br />
+             
               <span className="acc"> Six </span>
               ways we can help you.
             </h2>
@@ -73,7 +75,7 @@ export default function Services() {
         </div>
 
         <p className="services-intro">
-          For brands reaching Gen Z, venues wanting to fill rooms,or creators wanting to grow — built to work for all of it.
+          For brands reaching Gen Z, venues wanting to fill rooms,or creators wanting to grow  built to work for all of it.
           
         </p>
 

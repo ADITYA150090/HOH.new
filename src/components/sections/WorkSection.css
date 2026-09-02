@@ -41,17 +41,13 @@
     max-width: 420px;
     align-self: end;
     white-space: nowrap;
-}
-
-.svc-list {
-    border-top: 1px solid rgba(0, 0, 0, .1);
+    border-bottom: none;
 }
 
 .svc-item {
     display: grid;
     grid-template-columns: 64px 1fr auto;
     gap: 0;
-    border-bottom: 1px solid rgba(0, 0, 0, .1);
     padding: 0;
     transition: background .3s;
     cursor: default;
