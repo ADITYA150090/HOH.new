@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./WorkSection.css";
-import TV from "../../assets/Texture/TVhoh.webp";
+
+import mic from "../../assets/Texture/mic.png";
 import "./IntroSection.css";
 
 const portfolio = [
@@ -32,7 +33,7 @@ Everything we've built.
 </h2>
 </div>
 
-<img src={TV} alt="Portfolio" className="services-tv"/>
+<img src={mic} alt="" aria-hidden="true" className="services-tv"/>
 </div>
 
 <p className="services-intro">

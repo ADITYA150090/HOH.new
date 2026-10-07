@@ -1,54 +1,59 @@
-/* Reuses your existing Services theme */
+#work {
+    position: relative;
+    overflow-x: clip;
+}
 
-.project-date {
-    margin: 14px 0 18px;
-    font-size: .82rem;
-    letter-spacing: .16em;
+#work .max-w {
+    position: static;
+}
+
+#work .work-header {
+    position: static;
+    min-height: clamp(320px, 42vw, 640px);
+    /* reserves space for the mic */
+}
+
+#work .work-h2 {
+    position: relative;
+    z-index: 2;
+    max-width: 52%;
+    font-family: var(--f-display);
+    /* same display font as your other headings */
+    font-size: clamp(3rem, 7vw, 7rem);
+    /* adjust to match your old heading size */
+    line-height: .9;
     text-transform: uppercase;
-    color: rgba(0, 0, 0, .45);
+    margin: 0;
 }
 
-#work .svc-body {
-    max-height: unset;
-    opacity: 1;
-    margin-top: 0;
-}
-
-#work .svc-tags {
-    max-height: unset;
-    opacity: 1;
-    margin-top: 18px;
-}
-
-#work .svc-item {
-    cursor: pointer;
-    transition: .35s;
-}
-
-#work .svc-item:hover {
-    background: var(--cream2);
-}
-
-#work .svc-item:hover .svc-title {
+#work .work-h2 .acc {
     color: var(--pink);
 }
 
-#work .svc-item:hover .svc-arrow {
-    background: var(--pink);
-    color: #fff;
-    border-color: var(--pink);
-    transform: rotate(45deg);
+#work .work-mic {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: clamp(480px, 56vw, 900px);
+    height: auto;
+    max-width: none;
+    margin: 0;
+    scale: -1 1;
+    /* mirror: arm from the right, mic points left */
+    pointer-events: none;
+    user-select: none;
+    z-index: 1;
 }
 
-.services-more {
-    display: flex;
-    justify-content: center;
-    margin: 40px 0;
-}
-
-@media(max-width:768px) {
-    .project-date {
-        margin: 10px 0 15px;
-        font-size: .72rem;
+@media (max-width: 991px) {
+    #work .work-header {
+        min-height: 0;
+    }
+    #work .work-h2 {
+        max-width: 100%;
+    }
+    #work .work-mic {
+        width: 320px;
+        opacity: .25;
     }
 }

@@ -151,18 +151,20 @@ button {
         top: 0;
         pointer-events: none;
         border-radius: 999px;
-        z-index: 9997;
+        z-index: 99979;
         translate: -50% -50%;
     }
     #cur {
         width: 8px;
         height: 8px;
         background: var(--pink);
+        z-index: 10000000;
     }
     #cur-ring {
         width: 34px;
         height: 34px;
         border: 1px solid rgba(232, 0, 110, 0.55);
+        z-index: 1000000;
     }
 }
 

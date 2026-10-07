@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./PartnerSection.css";
-
+import hand from "../../assets/Texture/hand.png";
 export default function PartnerSection() {
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
@@ -26,6 +26,7 @@ export default function PartnerSection() {
 
         {/* FORM CARD CONTAINER */}
         <div className="partner-card">
+        <img src={hand} alt="" className="partner-hand" aria-hidden="true" />
           <div className="partner-card-grid">
             {/* LEFT COLUMN: TITLE & CONTACT INFO */}
             <div className="partner-info-col">
